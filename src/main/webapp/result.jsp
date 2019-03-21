@@ -59,7 +59,7 @@
                         <!-- bar links -->
                         <ul class="font-lato list-unstyled bar-links">
                             <li>
-                                <a href="home.jsp">
+                                <a href="index.jsp">
                                     <strong class="dt element-block text-capitalize hd-phone">Call :</strong>
                                     <strong class="dd element-block hd-phone">+375(29) 665 02 10</strong>
                                     <i class="fas fa-phone-square hd-up-phone hidden-sm hidden-md hidden-lg"><span
@@ -79,8 +79,8 @@
                     <div class="col-xs-3 col justify-end">
                         <!-- user links -->
                         <ul class="list-unstyled user-links fw-bold font-lato">
-                            <li><a href="index.jsp" class="lightbox">Login</a> <span class="sep">|</span> <a
-                                    href="index.jsp" class="lightbox">Register</a></li>
+                            <li><a href="login-regestration.jsp" class="lightbox">Login</a> <span class="sep">|</span> <a
+                                    href="login-regestration.jsp" class="lightbox">Register</a></li>
                         </ul>
                     </div>
                 </div>

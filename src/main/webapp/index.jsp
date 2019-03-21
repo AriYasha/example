@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
 	<!-- set the encoding of your site -->
@@ -31,7 +32,7 @@
 	<!-- main container of all the page elements -->
 	<div id="wrapper">
 		<!-- header of the page -->
-		<header id="page-header">
+		<header id="page-header" class="page-header-stick">
 			<!-- top bar -->
 			<div class="top-bar bg-dark text-gray">
 				<div class="container">
@@ -42,14 +43,14 @@
 								<li>
 									<a href="tel:+611234567890">
 										<strong class="dt element-block text-capitalize hd-phone">Call :</strong>
-										<strong class="dd element-block hd-phone">+(61) 123 456 7890</strong>
+										<strong class="dd element-block hd-phone">+375(29) 665 02 10</strong>
 										<i class="fas fa-phone-square hd-up-phone hidden-sm hidden-md hidden-lg"><span class="sr-only">phone</span></i>
 									</a>
 								</li>
 								<li>
 									<a href="mailto:&#069;&#120;&#097;&#109;&#112;&#108;&#101;&#064;&#100;&#111;&#109;&#097;&#105;&#110;&#046;&#099;&#111;&#109;">
-										<strong class="dt element-block text-capitalize hd-phone">Email :</strong>
-										<strong class="dd element-block hd-phone">&#069;&#120;&#097;&#109;&#112;&#108;&#101;&#064;&#100;&#111;&#109;&#097;&#105;&#110;&#046;&#099;&#111;&#109;</strong>
+										<strong class="dt element-block text-capitalize hd-phone">Email :yudenkovvs@mail.ru</strong>
+
 										<i class="fas fa-envelope-square hd-up-phone hidden-sm hidden-md hidden-lg"><span class="sr-only">email</span></i>
 									</a>
 								</li>
@@ -58,8 +59,9 @@
 						<div class="col-xs-3 col justify-end">
 							<!-- user links -->
 							<ul class="list-unstyled user-links fw-bold font-lato">
-								<li><a href="#popup1" class="lightbox">Login</a> <span class="sep">|</span> <a href="#popup2" class="lightbox">Register</a></li>
+								<li><a href="login-regestration.jsp" class="lightbox">Login</a> <span class="sep">|</span> <a href="login-regestration.jsp" class="lightbox">Register</a></li>
 							</ul>
+							<li> <c:out value="${user.nameUsers}"/> в системе</li>
 						</div>
 					</div>
 				</div>
@@ -71,8 +73,8 @@
 						<div class="col-xs-6 col-sm-3">
 							<!-- logo -->
 							<div class="logo">
-								<a href="home.html">
-									<img src="resources/images/logo-dark.png" alt="studylms">
+								<a href="index.jsp">
+
 								</a>
 							</div>
 						</div>
@@ -94,7 +96,7 @@
 										<li class="dropdown">
 											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">home</a>
 											<ul class="dropdown-menu">
-												<li><a href="home.html">Home 1</a></li>
+												<li><a href="index.jsp">Home 1</a></li>
 												<li><a href="home2.html">Home 2</a></li>
 											</ul>
 										</li>
@@ -121,7 +123,7 @@
 												<li><a href="forum-single.html">Forum Single</a></li>
 												<li><a href="instructors-list.html">Instructors List</a></li>
 												<li><a href="instructor-single.html">Instructors Single</a></li>
-												<li><a href="index.jsp">Login &amp; Register</a></li>
+												<li><a href="login-regestration.jsp">Login &amp; Register</a></li>
 											</ul>
 										</li>
 										<li class="dropdown">
@@ -162,77 +164,115 @@
 		</header>
 		<!-- contain main informative part of the site -->
 		<main id="main">
-			<!-- heading banner -->
-			<header class="heading-banner text-white bgCover" style="background-image: url(http://placehold.it/1920x181);">
-				<div class="container holder">
-					<div class="align">
-						<h1>My Account</h1>
+			<!-- intro block -->
+			<div class="intro-block">
+				<div class="slider fade-slider">
+					<div>
+						<!-- intro block slide -->
+						<article class="intro-block-slide overlay bg-cover" style="background-image: url(https://www.globaldialog.ru/_/manager/files/576/0f8d57d316/ucheba-za-granicei_c550x376.jpg);">
+							<div class="align-wrap container">
+								<div class="align">
+									<div class="anim">
+										<h1 class="intro-block-heading">Организация
+                                            и функционирование ЭВМ и ПУ</h1>
+									</div>
+									<div class="anim delay1">
+										<p>Дистанционное обучение. Желаем Вам успехов!</p>
+									</div>
+									<div class="anim delay2">
+										<div class="btns-wrap">
+											<a href="courses-list.html" class="btn btn-warning btn-theme text-uppercase">Информация о курсе</a>
+											<a href="contact.html" class="btn btn-white text-uppercase">Наши контакты</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+					<div>
+						<!-- intro block slide -->
+						<article class="intro-block-slide overlay bg-cover" style="background-image: url(http://placehold.it/1920x823);">
+							<div class="align-wrap container">
+								<div class="align">
+									<div class="anim">
+										<h1 class="intro-block-heading">Education Organization</h1>
+									</div>
+									<div class="anim delay1">
+										<p>We offer the most complete course pakage in the country, for the research, design and development of Education.</p>
+									</div>
+									<div class="anim delay2">
+										<div class="btns-wrap">
+											<a href="courses-list.html" class="btn btn-warning btn-theme text-uppercase">Our Courses</a>
+											<a href="contact.html" class="btn btn-white text-uppercase">Contact us</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+					<div>
+						<!-- intro block slide -->
+						<article class="intro-block-slide overlay bg-cover" style="background-image: url(http://placehold.it/1920x823);">
+							<div class="align-wrap container">
+								<div class="align">
+									<div class="anim">
+										<h1 class="intro-block-heading">Training Organization</h1>
+									</div>
+									<div class="anim delay1">
+										<p>We offer the most complete course pakage in the country, for the research, design and development of Education.</p>
+									</div>
+									<div class="anim delay2">
+										<div class="btns-wrap">
+											<a href="courses-list.html" class="btn btn-warning btn-theme text-uppercase">Our Courses</a>
+											<a href="contact.html" class="btn btn-white text-uppercase">Contact us</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
 					</div>
 				</div>
-			</header>
-			<!-- breadcrumb nav -->
-			<nav class="breadcrumb-nav">
 				<div class="container">
-					<!-- breadcrumb -->
-					<ol class="breadcrumb">
-						<li><a href="home.html">Home</a></li>
-						<li class="active">My Account</li>
-					</ol>
-				</div>
-			</nav>
-			<!-- user log block -->
-			<section class="container user-log-block">
-				<div class="row">
-					<div class="col-xs-12 col-md-6">
-						<!-- user log form -->
-						<form action="/login" role="form" method="POST" class="user-log-form">
-							<h2>Login Form</h2>
-							<div class="form-group">
-								<input type="text" class="form-control element-block" id="name" name="name" placeholder="Username or email address *">
+					<!-- features aside -->
+					<aside class="features-aside">
+						<a href="/theory"   class="col">
+							<span class="icn-wrap text-center no-shrink">
+								<img src="resources/images/icon01.svg" width="44" height="43" alt="trophy">
+							</span>
+							<div class="description">
+								<h2 class="features-aside-heading">Теория</h2>
+								<span class="view-more element-block text-uppercase">Узнать больше</span>
 							</div>
-							<div class="form-group">
-								<input type="password" class="form-control element-block" id="pass" name="pass" placeholder="Password *">
+						</a>
+						<a href="/tests" class="col">
+							<span class="icn-wrap text-center no-shrink">
+								<img src="resources/images/icon02.svg" width="43" height="39" alt="computer">
+							</span>
+							<div class="description">
+								<h2 class="features-aside-heading">Проверка знаний. Тесты</h2>
+								<span class="view-more element-block text-uppercase">Узнать больше</span>
 							</div>
-							<div class="btns-wrap">
-								<div class="wrap">
-									<label for="rem2" class="custom-check-wrap fw-normal font-lato">
-										<input type="checkbox" id="rem2" class="customFormReset">
-										<span class="fake-label element-block">Remember me</span>
-									</label>
-									<button type="submit" class="btn btn-theme btn-warning fw-bold font-lato text-uppercase">Login</button>
-								</div>
-								<div class="wrap text-right">
-									<p>
-										<a href="#" class="forget-link">Lost your Password?</a>
-									</p>
-								</div>
+						</a>
+						<a href="/information" class="col">
+							<span class="icn-wrap text-center no-shrink">
+								<img src="resources/images/icon03.svg" width="43" height="39" alt="computer">
+							</span>
+							<div class="description">
+								<h2 class="features-aside-heading">Ваши результаты</h2>
+								<span class="view-more element-block text-uppercase">Посмотреть больше</span>
 							</div>
-						</form>
-					</div>
-					<div class="col-xs-12 col-md-6">
-						<!-- user log form -->
-						<form action="/signIn" class="user-log-form" method="POST" >
-							<h2>Register Form</h2>
-							<div class="form-group">
-								<input type="email" class="form-control element-block"  name="name" placeholder="Email address *">
-							</div>
-							<div class="form-group">
-								<input type="password" class="form-control element-block"  name="pass" placeholder="Password *">
-							</div>
-							<div class="btns-wrap">
-								<div class="wrap">
-									<button type="submit" class="btn btn-theme btn-warning fw-bold font-lato text-uppercase">Register</button>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</section>
-		</main>
-		<!-- footer area container -->
-		<div class="footer-area bg-dark text-gray">
+						</a>
+					</aside>
 
-			<!-- page footer -->
+			     </div>
+			</section>
+			</div>
+		</main>
+
+
+
+			<div class="footer-area bg-dark text-gray">
+			<!-- popular posts block -->
 			<footer id="page-footer" class="font-lato">
 				<div class="container">
 					<div class="row holder">
@@ -250,52 +290,7 @@
 					</div>
 				</div>
 			</footer>
-		</div>
-		<!-- back top of the page -->
-		<span id="back-top" class="text-center fa fa-caret-up"></span>
-	</div>
-	<div class="popup-holder">
-		<div id="popup1" class="lightbox-demo">
-			<form action="#" class="user-log-form">
-				<h2>Login Form</h2>
-				<div class="form-group">
-					<input type="text" class="form-control element-block" placeholder="Username or email address *">
-				</div>
-				<div class="form-group">
-					<input type="password" class="form-control element-block" placeholder="Password *">
-				</div>
-				<div class="btns-wrap">
-					<div class="wrap">
-						<label for="rem" class="custom-check-wrap fw-normal font-lato">
-							<input type="checkbox" id="rem" class="customFormReset">
-							<span class="fake-label element-block">Remember me</span>
-						</label>
-						<button type="submit" class="btn btn-theme btn-warning fw-bold font-lato text-uppercase">Login</button>
-					</div>
-					<div class="wrap text-right">
-						<p>
-							<a href="#" class="forget-link">Lost your Password?</a>
-						</p>
-					</div>
-				</div>
-			</form>
-		</div>
-		<div id="popup2" class="lightbox-demo">
-			<form action="#" class="user-log-form">
-				<h2>Register Form</h2>
-				<div class="form-group">
-					<input type="email" class="form-control element-block" placeholder="Email address *">
-				</div>
-				<div class="form-group">
-					<input type="password" class="form-control element-block" placeholder="Password *">
-				</div>
-				<div class="btns-wrap">
-					<div class="wrap">
-						<button type="submit" class="btn btn-theme btn-warning fw-bold font-lato text-uppercase">Register</button>
-					</div>
-				</div>
-			</form>
-		</div>
+			</div>
 	</div>
 	<!-- include jQuery -->
 	<script src="resources/js/jquery.js"></script>

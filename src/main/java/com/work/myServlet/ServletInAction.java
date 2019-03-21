@@ -3,44 +3,83 @@ package com.work.myServlet;
 
 import com.work.dao.IUsers;
 import com.work.usersEntity.UsersEntity;
+import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.ui.Model;
+import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
-
+@SessionAttributes({"user"})
 public class ServletInAction {
 
     @Autowired
     IUsers userDao;
+    @Autowired
+    private UsersEntity usersEntity;
 
-    @GetMapping("/index")
-    public String index(ModelMap modelMap) {
-        modelMap.addAttribute("user", userDao.findById(1));
-        return "1";
+   @ModelAttribute("user")
+    public UsersEntity home() {
+
+       return new UsersEntity();
     }
+
+
+    @GetMapping(value = "/information")
+    public String information(@ModelAttribute("user") UsersEntity usersEntity){
+       String view= "index";
+       if(usersEntity.getNameUsers()!=null){
+           view="information";
+       } else{
+           view="login-regestration";
+       }
+
+       return view;
+    }
+
+
+    @GetMapping (value = "/theory")
+    public String showTheory(@ModelAttribute("user") UsersEntity usersEntity,Model model){
+       String view="index";
+        if(usersEntity.getNameUsers()!=null){
+            view="theory";
+        } else {
+            view="login-regestration";
+        }
+
+        return view;
+    }
+
+
+
+
 
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String loginUser(@RequestParam("name") String name, @RequestParam("pass") String pass, Model model) {
         String view = "index";
         List<UsersEntity> user = userDao.findByName(name);
+        UsersEntity users=user.get(0);
+        System.out.println(users.getNameUsers());
+        System.out.println(users.getPassword());
         if(user.isEmpty()){
-            view = "index";
+            view = "login-regestration";
         }
         else {
             UsersEntity usersEntity=user.get(0);
             if(name.equals(usersEntity.getNameUsers()) && pass.equals(usersEntity.getPassword())){
-                view="home";
-                model.addAttribute("user",name);
+                view="index";
+                model.addAttribute("user",usersEntity);
 
             }
             else{
-                view="index";
+                view="login-regestration";
             }
         }
 
@@ -59,16 +98,24 @@ public class ServletInAction {
 
     }
 
-    @RequestMapping(value = "/testing", method = RequestMethod.POST)
-    public String getTest() {
-        return "test";
+    @GetMapping(value = "/tests")
+    public String getTest(@ModelAttribute("user") UsersEntity usersEntity) {
+       String view="index";
+       if(usersEntity.getNameUsers()!=null){
+         view="tests";
+       } else{
+           view="login-regestration";
+       }
+        return view;
     }
+
+
 
     @RequestMapping(value = "/signIn", method = RequestMethod.POST)
     public String singInUser(@RequestParam("name") String name,
                              @RequestParam("pass") String pass,
                              Model model) {
-        String view = "signin";
+        String view = "login-regestration";
         List<UsersEntity> user = userDao.findByName(name);
 
 
@@ -80,8 +127,8 @@ public class ServletInAction {
                 usersEntity.setPassword(pass);
                 usersEntity.setRole("user");
                 userDao.insertUsers(usersEntity);
-                view="home";
-                model.addAttribute("user",name);
+                view="index";
+                model.addAttribute("user",usersEntity);
             }
             else {
                 view="nameExist";
@@ -104,9 +151,12 @@ public class ServletInAction {
         //UsersEntity usersEntity = (UsersEntity) context.getBean("usersEntity");
         //usersEntity.setIdUsers(1);
         //System.out.println(usersEntity.getIdUsers());
-
+        String view="tests";
+        if(choice==null ||condition==null || loop==null || language==null || principle==null){
+            view="tests";
+        }
       int count=0;
-        System.out.println("hello");
+        
         if (choice.equals("switch")) {
 
             model.addAttribute("choice", 1);

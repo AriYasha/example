@@ -82,7 +82,7 @@
     </header>
     </div>
 
-    <form action="home.jsp" method="post">
+    <form action="index.jsp" method="post">
         <input type="submit" name="back" value="Вернуться на гравную страницу">
     </form>
 <form action="/result" method="post">
