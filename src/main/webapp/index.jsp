@@ -62,6 +62,9 @@
 								<li><a href="login-regestration.jsp" class="lightbox">Login</a> <span class="sep">|</span> <a href="login-regestration.jsp" class="lightbox">Register</a></li>
 							</ul>
 							<li> <c:out value="${user.nameUsers}"/> в системе</li>
+                            <form action="/deleteSession" method="get">
+                            <input type="submit" name="выход" value="выйти">
+                            </form>
 						</div>
 					</div>
 				</div>

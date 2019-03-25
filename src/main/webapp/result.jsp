@@ -145,7 +145,8 @@
                     <p>прочитать подробнее про операторы условия вы можете <a
                             href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p>
                 </c:if>
-                <br> Итого неверных ответов-"${count}" из 5
+                <br> Итого неверных ответов-${count} из 5
+                <br> Оценка за тест ${rating}
             </div>
         </div>
     </section>

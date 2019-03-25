@@ -3,20 +3,18 @@ package com.work.myServlet;
 
 import com.work.dao.IUsers;
 import com.work.usersEntity.UsersEntity;
-import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.*;
 import org.springframework.ui.Model;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.support.SessionStatus;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
-@SessionAttributes({"user"})
+@SessionAttributes("user")
 public class ServletInAction {
 
     @Autowired
@@ -24,65 +22,67 @@ public class ServletInAction {
     @Autowired
     private UsersEntity usersEntity;
 
-   @ModelAttribute("user")
-    public UsersEntity home() {
+    @ModelAttribute("user")
+    public  UsersEntity home() {
 
-       return new UsersEntity();
+        return new UsersEntity();
+    }
+
+    @RequestMapping(value ="/deleteSession",method=RequestMethod.GET )
+    public String deleteSession(@ModelAttribute("user") UsersEntity usersEntity, SessionStatus sessionStatus)
+    {
+        sessionStatus.setComplete();
+        System.out.println("hello");
+        System.out.println(usersEntity.getNameUsers());
+        return "index";
     }
 
 
     @GetMapping(value = "/information")
-    public String information(@ModelAttribute("user") UsersEntity usersEntity){
-       String view= "index";
-       if(usersEntity.getNameUsers()!=null){
-           view="information";
-       } else{
-           view="login-regestration";
-       }
-
-       return view;
-    }
-
-
-    @GetMapping (value = "/theory")
-    public String showTheory(@ModelAttribute("user") UsersEntity usersEntity,Model model){
-       String view="index";
-        if(usersEntity.getNameUsers()!=null){
-            view="theory";
+    public String information(@ModelAttribute("user") UsersEntity usersEntity) {
+        String view = "index";
+        if (usersEntity.getNameUsers() != null) {
+            view = "information";
         } else {
-            view="login-regestration";
+            view = "login-regestration";
         }
 
         return view;
     }
 
 
+    @GetMapping(value = "/theory")
+    public String showTheory(@ModelAttribute("user") UsersEntity usersEntity, Model model) {
+        String view = "index";
+        if (usersEntity.getNameUsers() != null) {
+            view = "theory";
+        } else {
+            view = "login-regestration";
+        }
 
-
+        return view;
+    }
 
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String loginUser(@RequestParam("name") String name, @RequestParam("pass") String pass, Model model) {
-        String view = "index";
+            String view = "index";
         List<UsersEntity> user = userDao.findByName(name);
-        UsersEntity users=user.get(0);
+        UsersEntity users = user.get(0);
         System.out.println(users.getNameUsers());
         System.out.println(users.getPassword());
-        if(user.isEmpty()){
+        if (user.isEmpty()) {
             view = "login-regestration";
-        }
-        else {
-            UsersEntity usersEntity=user.get(0);
-            if(name.equals(usersEntity.getNameUsers()) && pass.equals(usersEntity.getPassword())){
-                view="index";
-                model.addAttribute("user",usersEntity);
+        } else {
+            UsersEntity usersEntity = user.get(0);
+            if (name.equals(usersEntity.getNameUsers()) && pass.equals(usersEntity.getPassword())) {
+                view = "index";
+                model.addAttribute("user", usersEntity);
 
-            }
-            else{
-                view="login-regestration";
+            } else {
+                view = "login-regestration";
             }
         }
-
 
 
         return view;
@@ -98,17 +98,16 @@ public class ServletInAction {
 
     }
 
-    @GetMapping(value = "/tests")
+    @RequestMapping(value = "/tests", method = RequestMethod.GET)
     public String getTest(@ModelAttribute("user") UsersEntity usersEntity) {
-       String view="index";
-       if(usersEntity.getNameUsers()!=null){
-         view="tests";
-       } else{
-           view="login-regestration";
-       }
+        String view = "index";
+        if (usersEntity.getNameUsers() != null) {
+            view = "tests";
+        } else {
+            view = "login-regestration";
+        }
         return view;
     }
-
 
 
     @RequestMapping(value = "/signIn", method = RequestMethod.POST)
@@ -122,21 +121,19 @@ public class ServletInAction {
         if (user.isEmpty()) {
 
             //if (pass.equals(passConf)) {
-                UsersEntity usersEntity = new UsersEntity();
-                usersEntity.setNameUsers(name);
-                usersEntity.setPassword(pass);
-                usersEntity.setRole("user");
-                userDao.insertUsers(usersEntity);
-                view="index";
-                model.addAttribute("user",usersEntity);
-            }
-            else {
-                view="nameExist";
-            }
+            UsersEntity usersEntity = new UsersEntity();
+            usersEntity.setNameUsers(name);
+            usersEntity.setPassword(pass);
+            usersEntity.setRole("user");
+            userDao.insertUsers(usersEntity);
+            view = "index";
+            model.addAttribute("user", usersEntity);
+        } else {
+            view = "nameExist";
+        }
 
 
-
-      return view;
+        return view;
     }
 
 
@@ -151,12 +148,13 @@ public class ServletInAction {
         //UsersEntity usersEntity = (UsersEntity) context.getBean("usersEntity");
         //usersEntity.setIdUsers(1);
         //System.out.println(usersEntity.getIdUsers());
-        String view="tests";
-        if(choice==null ||condition==null || loop==null || language==null || principle==null){
-            view="tests";
+        int rating=0;
+        String view = "tests";
+        if (choice == null && condition==null && loop == null && language == null && principle==null) {
+            view = "tests";
         }
-      int count=0;
-        
+        int count = 0;
+
         if (choice.equals("switch")) {
 
             model.addAttribute("choice", 1);
@@ -173,26 +171,28 @@ public class ServletInAction {
         }
 
         if (loop.equals("for")) {
-            model.addAttribute("loop",1);
+            model.addAttribute("loop", 1);
         } else {
-            model.addAttribute("loop",0);
+            model.addAttribute("loop", 0);
             count++;
         }
 
         if (language.equals("java")) {
-            model.addAttribute("language",1);
+            model.addAttribute("language", 1);
         } else {
-            model.addAttribute("language",0);
+            model.addAttribute("language", 0);
             count++;
         }
 
         if (principle.equals("principle")) {
-            model.addAttribute("principle;",1);
+            model.addAttribute("principle;", 1);
         } else {
             model.addAttribute("principle", 0);
             count++;
         }
+        rating=10/6*(6-count);
         model.addAttribute("count", count);
+        model.addAttribute("rating",rating);
         return "result";
     }
 }
