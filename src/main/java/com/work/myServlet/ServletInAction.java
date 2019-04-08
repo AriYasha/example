@@ -1,6 +1,8 @@
 package com.work.myServlet;
 
 
+import com.work.resultEntity.ResultEntity;
+import com.work.dao.IResult;
 import com.work.dao.IUsers;
 import com.work.usersEntity.UsersEntity;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,8 +11,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.support.SessionStatus;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 @Controller
@@ -19,6 +21,10 @@ public class ServletInAction {
 
     @Autowired
     IUsers userDao;
+
+    @Autowired
+    IResult resultDAo;
+
     @Autowired
     private UsersEntity usersEntity;
 
@@ -40,8 +46,14 @@ public class ServletInAction {
 
     @GetMapping(value = "/information")
     public String information(@ModelAttribute("user") UsersEntity usersEntity) {
+        String input = "01/01/2009" ;
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern( "MM/dd/yyyy" ) ;
+        LocalDate localDate = LocalDate.parse( input, formatter ) ;
         String view = "index";
         if (usersEntity.getNameUsers() != null) {
+            List<UsersEntity> user=userDao.findByName(usersEntity.getNameUsers());
+            ResultEntity resultEntity=resultDAo.findById(1);
+            System.out.println(resultEntity.getNameTest());
             view = "information";
         } else {
             view = "login-regestration";

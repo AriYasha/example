@@ -59,7 +59,7 @@ public class UsersRealizationDao implements IUsers {
     public List<UsersEntity> findByName(String name) {
         Session session = sessionFactory.openSession();
         Query query = session.createQuery("FROM UsersEntity where nameUsers=:name");
-        query.setParameter("name",name);
+        query.setParameter("name", name);
         List results = query.list();
 
 
@@ -69,7 +69,7 @@ public class UsersRealizationDao implements IUsers {
     public List<UsersEntity> findByPass(String pass) {
         Session session = sessionFactory.openSession();
         Query query = session.createQuery("FROM UsersEntity where password=:pass");
-        query.setParameter("pass",pass);
+        query.setParameter("pass", pass);
         List results = query.list();
         return results;
     }

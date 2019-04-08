@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.work.resultEntity.ResultEntity" table="result" schema="tests">
+        <id name="idResult">
+            <column name="id_Result" sql-type="int(11)"/>
+        </id>
+        <property name="nameTest">
+            <column name="nameTest" sql-type="varchar(45)" length="45" not-null="true"/>
+        </property>
+        <property name="ratingTest">
+            <column name="ratingTest" sql-type="int(11)"/>
+        </property>
+        <property name="dataTest">
+            <column name="dataTest" sql-type="date"/>
+        </property>
+    </class>
+</hibernate-mapping>
