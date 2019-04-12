@@ -44,6 +44,25 @@
             color: #0f0f0f;
             font-size: 150%;
         }
+
+                              TABLE {
+                                  width: 300px; /* Ширина таблицы */
+                                  border: 2px solid black; /* Рамка вокруг таблицы */
+                                  background: silver; /* Цвет фона таблицы */
+                              }
+        TD, TH {
+            text-align: center; /* Выравнивание по центру */
+            padding: 3px; /* Поля вокруг содержимого ячеек */
+        }
+        TH {
+            background: #4682b4; /* Цвет фона */
+            color: white; /* Цвет текста */
+            border-bottom: 2px solid black; /* Линия снизу */
+        }
+        .lc {
+            font-weight: bold; /* Жирное начертание текста */
+            text-align: left; /* Выравнивание по левому краю */
+        }
     </style>
 </head>
 <body>
@@ -117,34 +136,51 @@
         <div class="row">
             <div class="col-xs-12 col-md-6">
 
+<table>
+    <tr class="lc">
+        <td>Неверные ответы</td>
+        <td>Информация</td>
+
+    </tr>
 <c:if test="${choice==0}">
-    <p>1-ый вопрос - неверный ответ</p>
-    <p>подробнее прочитать про операторы выбора можно <a
-            href="http://developer.alexanderklimov.ru/android/java/switch.php">здесь</a></p>
+    <tr>
+    <td><p>Выберите верный ответ: оператором выбора
+        является:</p></td>
+   <td> <p>подробнее прочитать про операторы выбора можно <a
+           href="http://developer.alexanderklimov.ru/android/java/switch.php">здесь</a></p></td>
+        <td>${rating}</td>
+    </tr>
 </c:if>
-<c:if test="${condition==1}">
-    <p></p>
-</c:if>
-<c:if test="${condition==0}">
-    <p>2-ой вопрос - неверный ответ</p>
-    <p>прочитать подробнее про операторы условия вы можете <a
-            href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p>
+    <c:if test="${condition==0}">
+    <tr>
+   <td> <p>Выберите верный ответ: оператором условия является:</p></td>
+    <td><p>прочитать подробнее про операторы условия вы можете <a
+            href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+    </tr>
 </c:if>
                 <c:if test="${loop==0}">
-                    <p>3-ой вопрос - неверный ответ</p>
-                    <p>прочитать подробнее про операторы  вы можете <a
-                            href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p>
+    <tr>
+                   <td> <p>Выберите верный ответ: оператором цикла является</p></td>
+                   <td> <p>прочитать подробнее про операторы  вы можете <a
+                           href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+    </tr>
                 </c:if>
                 <c:if test="${language==0}">
-                    <p>4-ой вопрос - неверный ответ</p>
-                    <p>прочитать подробнее про операторы условия вы можете <a
-                            href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p>
+    <tr>
+                   <td> <p>Выберите верный ответ: самый популярный язык программирования:</p></td>
+                    <td><p>прочитать подробнее про операторы условия вы можете <a
+                            href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+    </tr>
                 </c:if>
                 <c:if test="${principle==0}">
-                    <p>5-ой вопрос - неверный ответ</p>
-                    <p>прочитать подробнее про операторы условия вы можете <a
-                            href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p>
+    <tr>
+                    <td><p> Выберите верный ответ: Принципы ООП:полиморфизм, абстракция,наследование, чего не
+                        хватает</p></td>
+                   <td><p>прочитать подробнее про операторы условия вы можете <a
+                           href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+    </tr>
                 </c:if>
+</table>
                 <br> Итого неверных ответов-${count} из 5
                 <br> Оценка за тест ${rating}
             </div>

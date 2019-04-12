@@ -2,6 +2,7 @@ package com.work.resultEntity;
 
 import javax.persistence.*;
 import java.sql.Date;
+
 import java.util.Objects;
 
 @Entity
@@ -11,14 +12,14 @@ public class ResultEntity {
     private String nameTest;
     private int idUsers;
     private int ratingTest;
-    private Date dataTest;
+    private java.util.Date dataTest;
 
     public ResultEntity(){
 
     }
 
 
-    public ResultEntity(String nameTest, int ratingTest, Date dataTest, int idUsers){
+    public ResultEntity(String nameTest, int ratingTest, java.util.Date dataTest, int idUsers){
         this.nameTest=nameTest;
         this.ratingTest=ratingTest;
         this.dataTest=dataTest;
@@ -66,11 +67,11 @@ public class ResultEntity {
 
     @Basic
     @Column(name = "dataTest", nullable = false)
-    public Date getDataTest() {
+    public java.util.Date getDataTest() {
         return dataTest;
     }
 
-    public void setDataTest(Date dataTest) {
+    public void setDataTest(java.util.Date dataTest) {
         this.dataTest = dataTest;
     }
 

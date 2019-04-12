@@ -11,9 +11,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.support.SessionStatus;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.List;
+import java.util.*;
 
 @Controller
 @SessionAttributes("user")
@@ -45,15 +47,16 @@ public class ServletInAction {
 
 
     @GetMapping(value = "/information")
-    public String information(@ModelAttribute("user") UsersEntity usersEntity) {
-        String input = "01/01/2009" ;
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern( "MM/dd/yyyy" ) ;
-        LocalDate localDate = LocalDate.parse( input, formatter ) ;
+    public String information(@ModelAttribute("user") UsersEntity usersEntity,Model model) {
         String view = "index";
         if (usersEntity.getNameUsers() != null) {
-            List<UsersEntity> user=userDao.findByName(usersEntity.getNameUsers());
-            ResultEntity resultEntity=resultDAo.findById(1);
-            System.out.println(resultEntity.getNameTest());
+            List<ResultEntity> resultEntity=resultDAo.findByIdUsers(usersEntity.getIdUsers());
+            ResultEntity resultEntity1= resultEntity.get(0);
+            System.out.println(resultEntity1.getDataTest());
+            Calendar calendar= new GregorianCalendar();
+            Date date= calendar.getTime();
+            model.addAttribute("usersEntity",usersEntity);
+            model.addAttribute("resultEntity",resultEntity);
             view = "information";
         } else {
             view = "login-regestration";
@@ -155,11 +158,16 @@ public class ServletInAction {
                             @RequestParam("loop") String loop,
                             @RequestParam("language") String language,
                             @RequestParam("principle") String principle,
+                            @ModelAttribute("user") UsersEntity usersEntity,
                             Model model) {
-        //ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-        //UsersEntity usersEntity = (UsersEntity) context.getBean("usersEntity");
-        //usersEntity.setIdUsers(1);
-        //System.out.println(usersEntity.getIdUsers());
+
+        Calendar calendar= new GregorianCalendar();
+        Date date=calendar.getTime();
+        int id=usersEntity.getIdUsers();
+        ResultEntity resultEntity=new ResultEntity();
+        resultEntity.setIdUsers(id);
+        resultEntity.setDataTest(date);
+        List<String> questions=new ArrayList<>();
         int rating=0;
         String view = "tests";
         if (choice == null && condition==null && loop == null && language == null && principle==null) {
@@ -203,6 +211,9 @@ public class ServletInAction {
             count++;
         }
         rating=10/6*(6-count);
+        resultEntity.setRatingTest(rating);
+        resultEntity.setNameTest("ЭВМ и ПУ (часть 2)");
+        resultDAo.insertResult(resultEntity);
         model.addAttribute("count", count);
         model.addAttribute("rating",rating);
         return "result";

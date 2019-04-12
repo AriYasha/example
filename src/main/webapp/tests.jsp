@@ -129,7 +129,7 @@
                         является:</label>
                     <br>
                     <label class="radio-inline" >
-                        <input type="radio" name="choice" value="if" > if
+                        <input type="radio" name="choice" value="if" required> if
                     </label>
                     <label class="radio-inline">
                         <input type="radio" name="choice" value="for" > for
@@ -144,7 +144,7 @@
                     <label class="bold" >2. Выберите верный ответ: оператором условия является:</label>
                     <br>
                     <label class="radio-inline">
-                        <input type="radio" name="condition" value="if" > if
+                        <input type="radio" name="condition" value="if"  required> if
                     </label>
                     <label class="radio-inline">
                         <input type="radio" name="condition" value="for"> for
@@ -159,7 +159,7 @@
                     <label class="bold" >3. Выберите верный ответ: оператором цикла является:</label>
                     <br>
                     <label class="radio-inline">
-                        <input type="radio" name="loop" value="if" > if
+                        <input type="radio" name="loop" value="if" required > if
                     </label>
                     <label class="radio-inline">
                         <input type="radio" name="loop" value="for"> for
@@ -175,7 +175,7 @@
                     <label class="bold" >4. Выберите верный ответ: самый популярный язык программирования:</label>
                     <br>
                     <label class="radio-inline">
-                        <input type="radio" name="language" value="java" > java
+                        <input type="radio" name="language" value="java" required > java
                     </label>
                     <label class="radio-inline">
                         <input type="radio" name="language" value="C#"> C#
@@ -192,7 +192,7 @@
                         хватает:</label>
                     <br>
                     <label class="radio-inline">
-                        <input type="radio" name="principle" value="инкапсуляция"> инкапсуляция
+                        <input type="radio" name="principle" value="инкапсуляция" required> инкапсуляция
                     </label>
                     <label class="radio-inline">
                         <input type="radio" name="principle" value="сервлет"> сервлет
