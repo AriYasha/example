@@ -6,6 +6,8 @@ import javax.persistence.*;
 @Table(name = "users", schema = "tests")
 public class UsersEntity {
     private int idUsers;
+    private String nameUser;
+    private String surname;
     private String nameUsers;
     private String password;
     private String role;
@@ -14,7 +16,9 @@ public class UsersEntity {
     }
 
 
-    public  UsersEntity(String nameUsers, String password, String role){
+    public  UsersEntity(String nameUser, String surname, String nameUsers, String password, String role){
+        this.nameUser=nameUser;
+        this.surname=surname;
         this.nameUsers=nameUsers;
         this.password=password;
         this.role=role;
@@ -22,8 +26,10 @@ public class UsersEntity {
 
 
 
-    public UsersEntity(int idUsers, String nameUsers, String password, String role) {
+    public UsersEntity(int idUsers,String nameUser,String surname, String nameUsers, String password, String role) {
         this.idUsers = idUsers;
+        this.nameUser=nameUser;
+        this.surname=surname;
         this.nameUsers = nameUsers;
         this.password = password;
         this.role = role;
@@ -39,6 +45,23 @@ public class UsersEntity {
         this.idUsers = idUsers;
     }
 
+    @Basic
+    @Column(name="nameUser",nullable = false)
+    public String getNameUser() { return nameUser;}
+
+    public void setNameUser(String nameUser) { this.nameUser = nameUser;}
+
+
+
+    @Basic
+    @Column(name="surname",nullable = false)
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
     @Basic
     @Column(name = "nameUsers", nullable = false, length = 45)
     public String getNameUsers() {

@@ -142,46 +142,72 @@
         <td>Информация</td>
 
     </tr>
-<c:if test="${choice==0}">
+<c:if test="${chooseOne==0}">
     <tr>
-    <td><p>Выберите верный ответ: оператором выбора
-        является:</p></td>
+    <td><p>Одноранговая архитектура-это:</p></td>
    <td> <p>подробнее прочитать про операторы выбора можно <a
            href="http://developer.alexanderklimov.ru/android/java/switch.php">здесь</a></p></td>
         <td>${rating}</td>
     </tr>
 </c:if>
-    <c:if test="${condition==0}">
+    <c:if test="${chooseTwo==0}">
     <tr>
-   <td> <p>Выберите верный ответ: оператором условия является:</p></td>
+   <td> <p>Архитектура "терминал-главный компьютер"-это</p></td>
     <td><p>прочитать подробнее про операторы условия вы можете <a
             href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
     </tr>
 </c:if>
-                <c:if test="${loop==0}">
+                <c:if test="${chooseThree==0}">
     <tr>
-                   <td> <p>Выберите верный ответ: оператором цикла является</p></td>
+                   <td> <p>Архитектура "клиент-сервер"-это</p></td>
                    <td> <p>прочитать подробнее про операторы  вы можете <a
                            href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
     </tr>
                 </c:if>
-                <c:if test="${language==0}">
+                <c:if test="${chooseFour==0}">
     <tr>
-                   <td> <p>Выберите верный ответ: самый популярный язык программирования:</p></td>
+                   <td> <p>Модель OSI можно разделить на :</p></td>
                     <td><p>прочитать подробнее про операторы условия вы можете <a
                             href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
     </tr>
                 </c:if>
-                <c:if test="${principle==0}">
+                <c:if test="${chooseFive==0}">
     <tr>
-                    <td><p> Выберите верный ответ: Принципы ООП:полиморфизм, абстракция,наследование, чего не
-                        хватает</p></td>
+                    <td><p> Топология-это</p></td>
                    <td><p>прочитать подробнее про операторы условия вы можете <a
                            href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
     </tr>
                 </c:if>
+    <c:if test="${chooseSix==0}">
+        <tr>
+            <td><p> Виды топологий:"общая шина","кольцо","звезда", чего не хватает</p></td>
+            <td><p>прочитать подробнее про операторы условия вы можете <a
+                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+        </tr>
+    </c:if>
+    <c:if test="${chooseSeven==0}">
+        <tr>
+            <td><p> Метод доступа это </p></td>
+            <td><p>прочитать подробнее про операторы условия вы можете <a
+                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+        </tr>
+    </c:if>
+    <c:if test="${chooseEight==0}">
+        <tr>
+            <td><p> Пакет-это</p></td>
+            <td><p>прочитать подробнее про операторы условия вы можете <a
+                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+        </tr>
+    </c:if>
+    <c:if test="${chooseNine==0}">
+        <tr>
+            <td><p> Клиенты-это</p></td>
+            <td><p>прочитать подробнее про операторы условия вы можете <a
+                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+        </tr>
+    </c:if>
 </table>
-                <br> Итого неверных ответов-${count} из 5
+                <br> Итого неверных ответов-${count} из 9
                 <br> Оценка за тест ${rating}
             </div>
         </div>

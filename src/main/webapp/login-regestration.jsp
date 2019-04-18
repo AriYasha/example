@@ -219,6 +219,12 @@
 							<div class="form-group">
 								<input type="password" class="form-control element-block"  name="pass" placeholder="Password *">
 							</div>
+							<div class="form-group">
+								<input type="text" class="form-control element-block"  name="nameUser" placeholder=" Your name *">
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control element-block"  name="surname" placeholder="Your surmane *">
+							</div>
 							<div class="btns-wrap">
 								<div class="wrap">
 									<button type="submit" class="btn btn-theme btn-warning fw-bold font-lato text-uppercase">Register</button>
