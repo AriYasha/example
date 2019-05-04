@@ -45,23 +45,28 @@
             font-size: 150%;
         }
 
-                              TABLE {
-                                  width: 300px; /* Ширина таблицы */
-                                  border: 2px solid black; /* Рамка вокруг таблицы */
-                                  background: silver; /* Цвет фона таблицы */
-                              }
-        TD, TH {
-            text-align: center; /* Выравнивание по центру */
-            padding: 3px; /* Поля вокруг содержимого ячеек */
-        }
-        TH {
-            background: #4682b4; /* Цвет фона */
-            color: white; /* Цвет текста */
-            border-bottom: 2px solid black; /* Линия снизу */
-        }
+
         .lc {
             font-weight: bold; /* Жирное начертание текста */
             text-align: left; /* Выравнивание по левому краю */
+        }
+        table {
+            font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+            text-align: left;
+            border-collapse: separate;
+            border-spacing: 5px;
+            background: #ECE9E0;
+            color: #656665;
+            border: 16px solid #ECE9E0;
+            border-radius: 20px;
+        }
+        tr {
+            font-size: 18px;
+            padding: 10px;
+        }
+        td {
+            background: #F5D7BF;
+            padding: 10px;
         }
     </style>
 </head>
@@ -147,7 +152,7 @@
     <td><p>Одноранговая архитектура-это:</p></td>
    <td> <p>подробнее прочитать про операторы выбора можно <a
            href="http://developer.alexanderklimov.ru/android/java/switch.php">здесь</a></p></td>
-        <td>${rating}</td>
+
     </tr>
 </c:if>
     <c:if test="${chooseTwo==0}">

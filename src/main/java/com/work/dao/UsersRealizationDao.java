@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
 import java.util.List;
 
 @Service("userRealizationDao")
@@ -66,6 +67,7 @@ public class UsersRealizationDao implements IUsers {
         return results;
     }
 
+
     public List<UsersEntity> findByPass(String pass) {
         Session session = sessionFactory.openSession();
         Query query = session.createQuery("FROM UsersEntity where password=:pass");
@@ -73,6 +75,19 @@ public class UsersRealizationDao implements IUsers {
         List results = query.list();
         return results;
     }
+
+
+    public List<UsersEntity> findBySurname(String surname) {
+        Session session = sessionFactory.openSession();
+        Query query = session.createQuery("FROM UsersEntity where surname=:surname");
+        query.setParameter("surname", surname);
+        List results = query.list();
+
+
+        return results;
+    }
+
+
 
     public SessionFactory getSessionFactory() {
         return sessionFactory;

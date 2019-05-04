@@ -44,6 +44,9 @@
             color: #0f0f0f;
             font-size: 150%;
         }
+        a{
+            line-height:1.5em;
+        }
     </style>
 </head>
 <body>
@@ -119,29 +122,38 @@
             <button type="submit" class="btn btn-warning" >Вернуться на главную страницу</button>
         </form>
 
-        <p  class="bold1">Выберите верный ответ</p>
+
 
         <div class="row">
-            <div class="col-xs-12 col-md-6">
-                <form action="/result" method="post">
+            <div class="col-xs-2 col-md-2">
+                <p><a href="testOne.jsp">Обзор и архитектура вычислительных сетей</a>
+                <p><a href="testTwo.jsp">Локальная вычислительная сеть</a>
+                <p><a  href="testThree.jsp">Физическая среда передачи данных</a>
+                <p><a  href="testFour.jsp">Сетевые операционные системы</a>
+                <p><a  href="testFive.jsp">Аппаратное обеспечение вычислительных сетей</a>
+            </div>
+            <div class="col-xs-10 col-md-10">
+                <p  class="bold1">Выберите верный ответ</p>
+                <p class="bold1">Физическая среда передачи данных</p>
+                <form action="/result?action=3" method="post">
                     <label class="form-check-label"></label>
                     <p>
                         <label class="bold" >1.Кабель связи-это:</label>
                         <br>
                         <label class="radio-inline" >
-                            <input type="radio" name="choice" value="a" required> длинномерное изделие электротехнической промышленности
+                            <input type="radio" name="chooseOne" value="a" required> длинномерное изделие электротехнической промышленности
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="choice" value="b" >  путь для передачи данных от одной системы к другой
+                            <input type="radio" name="chooseOne" value="b" >  путь для передачи данных от одной системы к другой
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="choice" value="c" > совокупносьт правил, устанавливающих формат т процедуры обмена информацией
+                            <input type="radio" name="chooseOne" value="c" > совокупносьт правил, устанавливающих формат т процедуры обмена информацией
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="choice" value="d" > поток сообщений в сети
+                            <input type="radio" name="chooseOne" value="d" > поток сообщений в сети
                         </label>
                         <br>
 
@@ -149,38 +161,38 @@
                         <label class="bold" >2. Вид кабеля который широко используется как для построения локальных связей, так и для образования магистралей глобальных сетей:</label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="condition" value="b"  required> коаксиальный
+                            <input type="radio" name="chooseTwo" value="b"  required> коаксиальный
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="condition" value="a">  оптоволокно
+                            <input type="radio" name="chooseTwo" value="a">  оптоволокно
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="condition" value="c">  медный
+                            <input type="radio" name="chooseTwo" value="c">  медный
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="condition" value="d">  ШВВП
+                            <input type="radio" name="chooseTwo" value="d">  ШВВП
                         </label>
                         <br>
                     <p>
                         <label class="bold" >3. Кабель типа "витая пара"-:</label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="loop" value="a" required > кабель,в котором изолированная пара проводников скручена с небольшим числом витков на единицу времени
+                            <input type="radio" name="chooseThree" value="a" required > кабель,в котором изолированная пара проводников скручена с небольшим числом витков на единицу времени
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="loop" value="b"> тонкий коаксиальный кабель
+                            <input type="radio" name="chooseThree" value="b"> тонкий коаксиальный кабель
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="loop" value="c"> беспроводные технологии
+                            <input type="radio" name="chooseThree" value="c"> беспроводные технологии
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="loop" value="d"> оптоволоконный кабель
+                            <input type="radio" name="chooseThree" value="d"> оптоволоконный кабель
                         </label>
                         <br>
 
@@ -188,19 +200,19 @@
                         <label class="bold" >4. Сколько основных типов беспроводной технологии :</label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="language" value="c" required > 4
+                            <input type="radio" name="chooseFour" value="c" required > 4
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="language" value="b">1
+                            <input type="radio" name="chooseFour" value="b">1
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="language" value="d">
+                            <input type="radio" name="chooseFour" value="d">
                             2</label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="language" value="a"> 3
+                            <input type="radio" name="chooseFour" value="a"> 3
                         </label>
                         <br>
 
@@ -208,19 +220,19 @@
                         <label class="bold">5. Технология "радиосвязь"-это:</label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="b" required> уникальная комбинация битов, позволяющих начать предачу данных
+                            <input type="radio" name="chooseFive" value="b" required> уникальная комбинация битов, позволяющих начать предачу данных
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="c"> множественный доступ с прослушиванием несущей
+                            <input type="radio" name="chooseFive" value="c"> множественный доступ с прослушиванием несущей
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="d"> рабочие станции, которые используют ресурсы сервера
+                            <input type="radio" name="chooseFive" value="d"> рабочие станции, которые используют ресурсы сервера
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="a"> пересылает данные на радиочастотах и практически не имеют ограничений по дальности
+                            <input type="radio" name="chooseFive" value="a"> пересылает данные на радиочастотах и практически не имеют ограничений по дальности
                         </label>
 
                         <br>
@@ -228,19 +240,19 @@
                         <label class="bold">6. Инфракрасная связь</label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="a" required> функционирование на очень высоких частотах, приближающихся к частотам видимого света
+                            <input type="radio" name="chooseSix" value="a" required> функционирование на очень высоких частотах, приближающихся к частотам видимого света
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="b"> передача данных в микроволнововом диапазоне
+                            <input type="radio" name="chooseSix" value="b"> передача данных в микроволнововом диапазоне
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="c"> радиосвязь
+                            <input type="radio" name="chooseSix" value="c"> радиосвязь
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="d"> беспроводные технологии передачи связи
+                            <input type="radio" name="chooseSix" value="d"> беспроводные технологии передачи связи
                         </label>
                         <br>
 
@@ -248,19 +260,19 @@
                         <label class="bold">7. Неэкранированная витая пара:</label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="b" required>  процедуры взаимодействия пользователя с системой или сетью
+                            <input type="radio" name="chooseSeven" value="b" required>  процедуры взаимодействия пользователя с системой или сетью
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="c"> концепция, определяющая взаимосвязь, структуру и функции взаимодействия рабочих станций в сети
+                            <input type="radio" name="chooseSeven" value="c"> концепция, определяющая взаимосвязь, структуру и функции взаимодействия рабочих станций в сети
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="a">это кабель из скрученных пар проводов
+                            <input type="radio" name="chooseSeven" value="a">это кабель из скрученных пар проводов
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="d"> объект, предоставляющий сервис другим объектам сети по их запросом
+                            <input type="radio" name="chooseSeven" value="d"> объект, предоставляющий сервис другим объектам сети по их запросом
                         </label>
                         <br>
 
@@ -268,19 +280,39 @@
                         <label class="bold">8. Где используется коаксиальный кабель:</label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="a" required> радио- и телеаппаратуре
+                            <input type="radio" name="chooseEight" value="a" required> радио- и телеаппаратуре
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="b"> беспроводные технологии
+                            <input type="radio" name="chooseEight" value="b"> беспроводные технологии
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="c"> уникальная комбинация битов, позволяющая начать передачу данных
+                            <input type="radio" name="chooseEight" value="c"> уникальная комбинация битов, позволяющая начать передачу данных
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="d"> способ соединения компьютеров в сеть
+                            <input type="radio" name="chooseEight" value="d"> способ соединения компьютеров в сеть
+                        </label>
+                        <br>
+
+                    <p>
+                        <label class="bold">9. Сопряжение с физическими средствами соединения посредством физической среды обеспечивает:</label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="chooseNine" value="a" required> физический уровень
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="chooseNine" value="b"> беспроводные технологии
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="chooseNine" value="c"> сетевой уровень
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="chooseNine" value="d"> предстовительский уровень
                         </label>
                         <br>
 

@@ -13,6 +13,7 @@ public interface IUsers {
      UsersEntity findById(int id);
      List<UsersEntity> findByName( String  name);
      List<UsersEntity> findByPass( String pass);
+     List<UsersEntity> findBySurname(String surname);
 
 
 }

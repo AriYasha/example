@@ -44,6 +44,9 @@
             color: #0f0f0f;
             font-size: 150%;
         }
+        a{
+            line-height:1.5em;
+        }
     </style>
 </head>
 <body>
@@ -119,29 +122,38 @@
             <button type="submit" class="btn btn-warning" >Вернуться на главную страницу</button>
         </form>
 
-        <p  class="bold1">Выберите верный ответ</p>
+
 
         <div class="row">
-            <div class="col-xs-12 col-md-6">
-                <form action="/result" method="post">
+            <div class="col-xs-2 col-md-2">
+                <p><a href="testOne.jsp">Обзор и архитектура вычислительных сетей</a>
+                <p><a href="testTwo.jsp">Локальная вычислительная сеть</a>
+                <p><a  href="testThree.jsp">Физическая среда передачи данных</a>
+                <p><a  href="testFour.jsp">Сетевые операционные системы</a>
+                <p><a  href="testFive.jsp">Аппаратное обеспечение вычислительных сетей</a>
+            </div>
+            <div class="col-xs-10 col-md-10">
+                <p  class="bold1">Выберите верный ответ</p>
+                <p class="bold1">Аппаратное обеспечение вычислительных сетей</p>
+                <form action="/result?action=5" method="post">
                     <label class="form-check-label"></label>
                     <p>
                         <label class="bold" >1. Мост-это:</label>
                         <br>
                         <label class="radio-inline" >
-                            <input type="radio" name="choice" value="a" required> ретрансляционная система, соединяющая каналы передачи данных
+                            <input type="radio" name="chooseOne" value="a" required> ретрансляционная система, соединяющая каналы передачи данных
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="choice" value="b" >  путь для передачи данных от одной системы к другой
+                            <input type="radio" name="chooseOne" value="b" >  путь для передачи данных от одной системы к другой
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="choice" value="c" > совокупносьт правил, устанавливающих формат т процедуры обмена информацией
+                            <input type="radio" name="chooseOne" value="c" > совокупносьт правил, устанавливающих формат т процедуры обмена информацией
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="choice" value="d" > поток сообщений в сети
+                            <input type="radio" name="chooseOne" value="d" > поток сообщений в сети
                         </label>
                         <br>
 
@@ -149,38 +161,38 @@
                         <label class="bold" >2. Коммутатор-это:</label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="condition" value="b"  required> архитектура "клиент-сервер"
+                            <input type="radio" name="chooseTwo" value="b"  required> архитектура "клиент-сервер"
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="condition" value="a">  устройство, осуществляющее выбор одного из возможных вариантов направления передачи данных
+                            <input type="radio" name="chooseTwo" value="a">  устройство, осуществляющее выбор одного из возможных вариантов направления передачи данных
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="condition" value="c">  способ соединения компьютеров в сеть
+                            <input type="radio" name="chooseTwo" value="c">  способ соединения компьютеров в сеть
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="condition" value="d">  топология ЛВС, в которой каждая станция соединена с двумя другими станциями, образуя кольцо
+                            <input type="radio" name="chooseTwo" value="d">  топология ЛВС, в которой каждая станция соединена с двумя другими станциями, образуя кольцо
                         </label>
                         <br>
                     <p>
                         <label class="bold" >3. Коммутатор локальной сети-это:</label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="loop" value="a" required > устройство,обеспечивающие взаимодействие сегментов одной либо группы локальной сетей
+                            <input type="radio" name="chooseThree" value="a" required > устройство,обеспечивающие взаимодействие сегментов одной либо группы локальной сетей
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="loop" value="b"> способ определения того, какая их рабочих станций сможет слудующей использовать ЛВС
+                            <input type="radio" name="chooseThree" value="b"> способ определения того, какая их рабочих станций сможет слудующей использовать ЛВС
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="loop" value="c"> уникальная комбинация битов, позволяющая начать передачу данных
+                            <input type="radio" name="chooseThree" value="c"> уникальная комбинация битов, позволяющая начать передачу данных
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="loop" value="d"> метод множественного доступа с прослушиванием несущей
+                            <input type="radio" name="chooseThree" value="d"> метод множественного доступа с прослушиванием несущей
                         </label>
                         <br>
 
@@ -188,19 +200,19 @@
                         <label class="bold" >4. Маршрутизатор-это :</label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="language" value="c" required > нижние и верхние протоколы
+                            <input type="radio" name="chooseFour" value="c" required > нижние и верхние протоколы
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="language" value="b"> 9 уровней
+                            <input type="radio" name="chooseFour" value="b"> 9 уровней
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="language" value="d"> левые и правые модели
+                            <input type="radio" name="chooseFour" value="d"> левые и правые модели
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="language" value="a"> ретрансляционная система, соединяющая две коммуникационные сети либо их части
+                            <input type="radio" name="chooseFour" value="a"> ретрансляционная система, соединяющая две коммуникационные сети либо их части
                         </label>
                         <br>
 
@@ -208,19 +220,19 @@
                         <label class="bold">5. Шлюз-это:</label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="b" required> уникальная комбинация битов, позволяющих начать предачу данных
+                            <input type="radio" name="chooseFive" value="b" required> уникальная комбинация битов, позволяющих начать предачу данных
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="c"> множественный доступ с прослушиванием несущей
+                            <input type="radio" name="chooseFive" value="c"> множественный доступ с прослушиванием несущей
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="d"> рабочие станции, которые используют ресурсы сервера
+                            <input type="radio" name="chooseFive" value="d"> рабочие станции, которые используют ресурсы сервера
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="a"> ретрансляционная система, обеспечивающая взаимодействие информационных сетей
+                            <input type="radio" name="chooseFive" value="a"> ретрансляционная система, обеспечивающая взаимодействие информационных сетей
                         </label>
 
                         <br>
@@ -228,19 +240,19 @@
                         <label class="bold">6.Какая топология используется в сети </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="a" required> "звезда"
+                            <input type="radio" name="chooseSix" value="a" required> "звезда"
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="b"> "солнце"
+                            <input type="radio" name="chooseSix" value="b"> "солнце"
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="c"> "земля"
+                            <input type="radio" name="chooseSix" value="c"> "земля"
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="d"> "квадрат"
+                            <input type="radio" name="chooseSix" value="d"> "квадрат"
                         </label>
                         <br>
 
@@ -248,19 +260,19 @@
                         <label class="bold">7. При выборе места для установки концентратора необходимо учитывать следующие аспекты:</label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="b" required>  процедуры взаимодействия пользователя с системой или сетью
+                            <input type="radio" name="chooseSeven" value="b" required>  процедуры взаимодействия пользователя с системой или сетью
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="c"> концепция, определяющая взаимосвязь, структуру и функции взаимодействия рабочих станций в сети
+                            <input type="radio" name="chooseSeven" value="c"> концепция, определяющая взаимосвязь, структуру и функции взаимодействия рабочих станций в сети
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="a">местоположение, расстояние, питание
+                            <input type="radio" name="chooseSeven" value="a">местоположение, расстояние, питание
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="d"> объект, предоставляющий сервис другим объектам сети по их запросом
+                            <input type="radio" name="chooseSeven" value="d"> объект, предоставляющий сервис другим объектам сети по их запросом
                         </label>
                         <br>
 
@@ -268,21 +280,42 @@
                         <label class="bold">8. Верно ли утверждение: "Шлюзы работают медленнее, чем маршрутизаторы":</label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="a" required> да
+                            <input type="radio" name="chooseEight" value="a" required> да
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="b"> нет
+                            <input type="radio" name="chooseEight" value="b"> нет
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="c"> не знаю
+                            <input type="radio" name="chooseEight" value="c"> не знаю
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="d"> одинаково
+                            <input type="radio" name="chooseEight" value="d"> одинаково
                         </label>
                         <br>
+
+                    <p>
+                        <label class="bold">9. Как передает кадры мост:</label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="chooseNine" value="a" required> последовательно
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="chooseNine" value="b"> параллельно
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="chooseNine" value="c"> не знаю
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="chooseNine" value="d"> последовательно и параллельно
+                        </label>
+                        <br>
+
 
                     <p>
 

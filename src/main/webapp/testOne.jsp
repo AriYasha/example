@@ -26,6 +26,9 @@
           rel="stylesheet">
     <!-- include the site bootstrap stylesheet -->
     <link rel="stylesheet" href="resources/css/bootstrap.css">
+    <title>Title</title>
+
+
     <!-- include the site stylesheet -->
     <link rel="stylesheet" href="resources/css/plugins.css">
     <!-- include the site stylesheet -->
@@ -34,16 +37,22 @@
     <link rel="stylesheet" href="resources/style.css">
     <!-- include the site responsive stylesheet -->
     <link rel="stylesheet" href="resources/css/responsive.css">
+
     <style>
         .bold{
             color: #303F9F;
             font-size: 120%;
 
         }
-        .bold1{
+        .bold1 {
             color: #0f0f0f;
             font-size: 150%;
         }
+        a{
+            line-height:1.5em;
+        }
+
+
     </style>
 </head>
 <body>
@@ -119,11 +128,21 @@
             <button type="submit" class="btn btn-warning" >Вернуться на главную страницу</button>
         </form>
 
-        <p  class="bold1">Выберите верный ответ</p>
+
 
         <div class="row">
-            <div class="col-xs-12 col-md-6">
-                <form action="/result" method="post">
+            <div class="col-xs-2 col-md-2">
+               <p> <a href="testOne.jsp">Обзор и архитектура вычислительных сетей</a>
+              <p><a href="testTwo.jsp">Локальная вычислительная сеть</a>
+               <p><a  href="testThree.jsp">Физическая среда передачи данных</a>
+              <p><a  href="testFour.jsp">Сетевые операционные системы</a>
+               <p><a  href="testFive.jsp">Аппаратное обеспечение вычислительных сетей</a>
+
+            </div>
+            <div class="col-xs-10 col-md-10">
+                <p  class="bold1">Выберите верный ответ</p>
+                <p class="bold1">Обзор и архитектура вычислительных сетей</p>
+                <form action="/result?action=1" method="post">
                     <label class="form-check-label"></label>
                     <p>
                     <label class="bold" >1. Одноранговая архитерура-это:</label>
@@ -305,7 +324,7 @@
 
 
                     <br>
-                    <p><input type="submit" name="sendTest" value="Отправить на проверку"></p>
+                    <p><input type="submit" name="1" value="Отправить на проверку"></p>
                 </form>
 
             </div>
@@ -343,5 +362,6 @@
 <script src="resources/js/jquery.main.js"></script>
 <!-- include jQuery -->
 <script type="text/javascript" src="resources/js/init.js"></script>
+
 </body>
 </html>

@@ -44,6 +44,9 @@
             color: #0f0f0f;
             font-size: 150%;
         }
+        a{
+            line-height:1.5em;
+        }
     </style>
 </head>
 <body>
@@ -119,29 +122,38 @@
             <button type="submit" class="btn btn-warning" >Вернуться на главную страницу</button>
         </form>
 
-        <p  class="bold1">Выберите верный ответ</p>
+
 
         <div class="row">
-            <div class="col-xs-12 col-md-6">
-                <form action="/result" method="post">
+            <div class="col-xs-2 col-md-2">
+                <p><a href="testOne.jsp">Обзор и архитектура вычислительных сетей</a>
+                <p><a href="testTwo.jsp">Локальная вычислительная сеть</a>
+                <p><a  href="testThree.jsp">Физическая среда передачи данных</a>
+                <p><a  href="testFour.jsp">Сетевые операционные системы</a>
+                <p><a  href="testFive.jsp">Аппаратное обеспечение вычислительных сетей</a>
+            </div>
+            <div class="col-xs-10 col-md-10">
+                <p  class="bold1">Выберите верный ответ</p>
+                <p class="bold1">Локальная вычислительная сеть</p>
+                <form action="/result?action=2" method="post">
                     <label class="form-check-label"></label>
                     <p>
                         <label class="bold" >1. Локальная вычислительная сеть-это:</label>
                         <br>
                         <label class="radio-inline" >
-                            <input type="radio" name="choice" value="a" required> совокупность компьютеров, каналов связи,сетевых адаптеров,работающих под управление сетевой операционной системы и сетевого программного обеспечения
+                            <input type="radio" name="chooseOne" value="a" required> совокупность компьютеров, каналов связи,сетевых адаптеров,работающих под управление сетевой операционной системы и сетевого программного обеспечения
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="choice" value="b" >  путь для передачи данных от одной системы к другой
+                            <input type="radio" name="chooseOne" value="b" >  путь для передачи данных от одной системы к другой
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="choice" value="c" > совокупносьт правил, устанавливающих формат т процедуры обмена информацией
+                            <input type="radio" name="chooseOne" value="c" > совокупносьт правил, устанавливающих формат т процедуры обмена информацией
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="choice" value="d" > поток сообщений в сети
+                            <input type="radio" name="chooseOne" value="d" > поток сообщений в сети
                         </label>
                         <br>
 
@@ -149,38 +161,38 @@
                         <label class="bold" >2. Рабочая станция-это:</label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="condition" value="b"  required> архитектура "клиент-сервер"
+                            <input type="radio" name="chooseTwo" value="b"  required> архитектура "клиент-сервер"
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="condition" value="a">  абонентская система, специализированная для решения определенных задач и использующая сетевые ресурсы осуществляется одним или группой главных компьютеров
+                            <input type="radio" name="chooseTwo" value="a">  абонентская система, специализированная для решения определенных задач и использующая сетевые ресурсы осуществляется одним или группой главных компьютеров
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="condition" value="c">  компьютер, предоставляющий свои ресурсы другим пользователям сети
+                            <input type="radio" name="chooseTwo" value="c">  компьютер, предоставляющий свои ресурсы другим пользователям сети
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="condition" value="d">  топология ЛВС, в которой каждая станция соединена с двумя другими станциями, образуя кольцо
+                            <input type="radio" name="chooseTwo" value="d">  топология ЛВС, в которой каждая станция соединена с двумя другими станциями, образуя кольцо
                         </label>
                         <br>
                     <p>
                         <label class="bold" >3. Сервер-это:</label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="loop" value="a" required > компьютер, предоставляющий свои ресурсы другим пользователям
+                            <input type="radio" name="chooseThree" value="a" required > компьютер, предоставляющий свои ресурсы другим пользователям
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="loop" value="b"> способ определения того, какая их рабочих станций сможет слудующей использовать ЛВС
+                            <input type="radio" name="chooseThree" value="b"> способ определения того, какая их рабочих станций сможет слудующей использовать ЛВС
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="loop" value="c"> комплекс программ, обоспечивающих в сети обработку, хранение и передачу данных
+                            <input type="radio" name="chooseThree" value="c"> комплекс программ, обоспечивающих в сети обработку, хранение и передачу данных
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="loop" value="d"> метод множественного доступа с прослушиванием несущей
+                            <input type="radio" name="chooseThree" value="d"> метод множественного доступа с прослушиванием несущей
                         </label>
                         <br>
 
@@ -188,19 +200,19 @@
                         <label class="bold" >4. Сетевые операционные системы-это :</label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="language" value="c" required > способ определения того, какая их рабочих станций сможет слудующей использовать ЛВС
+                            <input type="radio" name="chooseFour" value="c" required > способ определения того, какая их рабочих станций сможет слудующей использовать ЛВС
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="language" value="b"> метод множественного доступа с прослушиванием несущей
+                            <input type="radio" name="chooseFour" value="b"> метод множественного доступа с прослушиванием несущей
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="language" value="d"> функционирование сетевых служб
+                            <input type="radio" name="chooseFour" value="d"> функционирование сетевых служб
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="language" value="a"> комплекс программ, обеспечивающих в сети обработку,хранение и передачу данных
+                            <input type="radio" name="chooseFour" value="a"> комплекс программ, обеспечивающих в сети обработку,хранение и передачу данных
                         </label>
                         <br>
 
@@ -208,19 +220,19 @@
                         <label class="bold">5. Защита данных необходима для обеспечения :</label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="b" required> специальных выходов мостов и маршрутизаторов
+                            <input type="radio" name="chooseFive" value="b" required> специальных выходов мостов и маршрутизаторов
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="c"> функционирования сетевых служб
+                            <input type="radio" name="chooseFive" value="c"> функционирования сетевых служб
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="d"> управления сетью
+                            <input type="radio" name="chooseFive" value="d"> управления сетью
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="a"> гарантии разрушений,защиты конфидентиальности
+                            <input type="radio" name="chooseFive" value="a"> гарантии разрушений,защиты конфидентиальности
                         </label>
 
                         <br>
@@ -228,19 +240,19 @@
                         <label class="bold">6. Первый шаг к безопасности-</label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="a" required> введение пароля
+                            <input type="radio" name="chooseSix" value="a" required> введение пароля
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="b"> аппаратура передачи данных по длинным линиям(модемы)
+                            <input type="radio" name="chooseSix" value="b"> аппаратура передачи данных по длинным линиям(модемы)
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="c"> устройства подключения к цифровым каналам
+                            <input type="radio" name="chooseSix" value="c"> устройства подключения к цифровым каналам
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="d"> адресация объектов сети
+                            <input type="radio" name="chooseSix" value="d"> адресация объектов сети
                         </label>
                         <br>
 
@@ -248,21 +260,62 @@
                         <label class="bold">7. К  коммуникационым каналам относятся:</label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="b" required>  сетевые кабели
+                            <input type="radio" name="chooseSeven" value="b" required>  сетевые кабели
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="c"> принтеры
+                            <input type="radio" name="chooseSeven" value="c"> принтеры
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="a">кабели, разъемы
+                            <input type="radio" name="chooseSeven" value="a">кабели, разъемы
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="principle" value="d"> все вышеперечисленное
+                            <input type="radio" name="chooseSeven" value="d"> все вышеперечисленное
                         </label>
                         <br>
+
+                    <p>
+                        <label class="bold">8. Компьютеры, входящие в ЛВС клиентско-серверной архитектуры,делятся на два типа:</label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="chooseEight" value="b" required>  сетевые кабели
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="chooseEight" value="c"> принтеры
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="chooseEight" value="a">рабочие станции, файловые сервера
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="chooseEight" value="d"> все вышеперечисленное
+                        </label>
+                        <br>
+
+                    <p>
+                        <label class="bold">9. К абонентским системам относятся:</label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="chooseNine" value="b" required>  сетевые кабели
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="chooseNine" value="c"> модемы
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="chooseNine" value="a">компьютеры,принтеры,сканеры
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="chooseNine" value="d"> все вышеперечисленное
+                        </label>
+                        <br>
+                    <p>
 
 
 

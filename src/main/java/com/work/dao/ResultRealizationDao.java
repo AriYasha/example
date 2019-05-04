@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.sql.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 
@@ -45,12 +47,30 @@ public class ResultRealizationDao implements IResult {
     }
 
     @Override
+    public List<ResultEntity> selectAll() {
+        Session session=sessionFactory.openSession();
+        Query query=session.createQuery("FROM ResultEntity ");
+        List results=query.list();
+        return results;
+    }
+
+    @Override
     public ResultEntity findById(int id) {
         Session session = sessionFactory.openSession();
         Transaction tx2 = session.beginTransaction();
         ResultEntity resultEntity = session.get(ResultEntity.class, id);
         tx2.commit();
         return resultEntity;
+    }
+    @Override
+    public List<ResultEntity> findByDate(LocalDate date1, LocalDate date2, int idUsers) {
+        Session session = sessionFactory.openSession();
+        Query query = session.createQuery("FROM ResultEntity where idUsers=:idUsers and dataTest  between  :date1 and :date2 ");
+        query.setParameter("date1",date1);
+        query.setParameter("date2",date2);
+        query.setParameter("idUsers",idUsers);
+        List results = query.list();
+        return results;
     }
 
 

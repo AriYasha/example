@@ -5,6 +5,7 @@ import com.work.resultEntity.ResultEntity;
 import com.work.dao.IResult;
 import com.work.dao.IUsers;
 import com.work.usersEntity.UsersEntity;
+import org.osgi.service.useradmin.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -78,26 +79,77 @@ public class ServletInAction {
     }
 
 
+
+    @RequestMapping(value = "/resultBySurname", method = RequestMethod.POST)
+    public String resultBySurname(@RequestParam("dateFrom") String dateFrom,
+            @RequestParam("dateTo") String dateTo,
+            @RequestParam("surname") String surname,
+            @ModelAttribute("user") UsersEntity usersEntity, Model model) {
+        String view = "index";
+        DateTimeFormatter formatter= DateTimeFormatter.ofPattern("yyyy-mm-dd",Locale.ENGLISH);
+        LocalDate date=LocalDate.parse(dateFrom);
+       LocalDate date1=LocalDate.parse(dateTo);
+        List<UsersEntity> result=userDao.findBySurname(surname);
+        UsersEntity usersEntity1=result.get(0);
+        int id=usersEntity1.getIdUsers();
+       List<ResultEntity> resultBySurname=resultDAo.findByDate(date,date1,id);
+       model.addAttribute("resultEntity",resultBySurname);
+       model.addAttribute("result",usersEntity1);
+
+        return "resultBySurname";
+    }
+
+
+
+    @GetMapping(value = "/resultStudents")
+    public String resultStudents( Model model) {
+        String view = "index";
+
+        //ResultEntity resultEntity=new ResultEntity();
+        List<ResultEntity> resultEntity= resultDAo.selectAll();
+
+
+        //resultEntity.setDataTest(date);
+        //List<ResultEntity> resultBySurname=resultDAo.findByDate(2019-04-19,2019-04-23,2);
+       // int i=resultBySurname.size();
+        //System.out.println(i);
+
+
+
+        model.addAttribute("resultEntity",resultEntity);
+
+
+        return "resultStudents";
+    }
+
+
+
+
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String loginUser(@RequestParam("name") String name, @RequestParam("pass") String pass, Model model) {
-        String view = "index";
+        String view;
         List<UsersEntity> user = userDao.findByName(name);
-        UsersEntity users = user.get(0);
-        System.out.println(users.getNameUsers());
-        System.out.println(users.getPassword());
-        if (user.isEmpty()) {
+
+        if (user.isEmpty() || name.equals("")|| pass.equals("")) {
             view = "login-regestration";
-        } else {
-            UsersEntity usersEntity = user.get(0);
-            if (name.equals(usersEntity.getNameUsers()) && pass.equals(usersEntity.getPassword())) {
-                view = "index";
-                model.addAttribute("user", usersEntity);
-
-            } else {
-                view = "login-regestration";
-            }
         }
+            else{
+                UsersEntity usersEntity = user.get(0);
+                if(name.equals("admin") && pass.equals("admin")){
+                    view="indexAdmin";
+                }
+                else {
+                    if (name.equals(usersEntity.getNameUsers()) && pass.equals(usersEntity.getPassword())) {
+                        view = "index";
+                        model.addAttribute("user", usersEntity);
 
+                    } else {
+                        view = "login-regestration";
+                    }
+                }
+            }
+
+       System.out.println(view);
 
         return view;
     }
@@ -117,9 +169,11 @@ public class ServletInAction {
         String view = "index";
         if (usersEntity.getNameUsers() != null) {
             view = "testOne";
+
         } else {
             view = "login-regestration";
         }
+
         return view;
     }
 
@@ -132,24 +186,26 @@ public class ServletInAction {
                              Model model) {
         String view = "login-regestration";
         List<UsersEntity> user = userDao.findByName(name);
-
-
-        if (user.isEmpty()) {
-
-            //if (pass.equals(passConf)) {
-            UsersEntity usersEntity = new UsersEntity();
-            usersEntity.setNameUsers(name);
-            usersEntity.setSurname(surname);
-            usersEntity.setNameUser(nameUser);
-            usersEntity.setPassword(pass);
-            usersEntity.setRole("user");
-            userDao.insertUsers(usersEntity);
-            view = "index";
-            model.addAttribute("user", usersEntity);
+        if(name=="" || pass=="" || nameUser=="" || surname==""){
+            view="login-regestration";
         } else {
-            view = "nameExist";
-        }
 
+            if (user.isEmpty()) {
+
+                //if (pass.equals(passConf)) {
+                UsersEntity usersEntity = new UsersEntity();
+                usersEntity.setNameUsers(name);
+                usersEntity.setSurname(surname);
+                usersEntity.setNameUser(nameUser);
+                usersEntity.setPassword(pass);
+                usersEntity.setRole("user");
+                userDao.insertUsers(usersEntity);
+                view = "index";
+                model.addAttribute("user", usersEntity);
+            } else {
+                view = "nameExist";
+            }
+        }
 
         return view;
     }
@@ -162,16 +218,17 @@ public class ServletInAction {
                             @RequestParam("language") String language,
                             @RequestParam("principle") String principle,
                             @ModelAttribute("user") UsersEntity usersEntity,
+                            @RequestParam("action") int variable,
                             Model model) {
-
+        System.out.println(variable);
         Calendar calendar = new GregorianCalendar();
         Date date = calendar.getTime();
         System.out.println(date);
         int id = usersEntity.getIdUsers();
         ResultEntity resultEntity = new ResultEntity();
         resultEntity.setIdUsers(id);
-        resultEntity.setDataTest(date);
-        List<String> questions = new ArrayList<>();
+       // resultEntity.setDataTest(date);
+
         int rating = 0;
         String view = "result";
         if (choice == null && condition == null && loop == null && language == null && principle == null) {
@@ -234,15 +291,17 @@ public class ServletInAction {
                             @RequestParam("chooseSeven") String chooseSeven,
                             @RequestParam("chooseEight")String chooseEight,
                             @RequestParam("chooseNine") String chooseNine,
+                            @RequestParam("action") int variable,
                             @ModelAttribute("user") UsersEntity usersEntity,
                             Model model) {
 
-        Calendar calendar = new GregorianCalendar();
-        Date date = calendar.getTime();
+
+       LocalDate date=LocalDate.now();
         int id = usersEntity.getIdUsers();
         ResultEntity resultEntity = new ResultEntity();
         resultEntity.setIdUsers(id);
         resultEntity.setDataTest(date);
+        System.out.println(variable);
         int rating = 0;
         int count = 0;
 
@@ -309,11 +368,35 @@ public class ServletInAction {
             model.addAttribute("chooseNine", 0);
             count++;
         }
-
-        rating = 10 / 9 * (9 - count);
-        System.out.println(count);
-        resultEntity.setRatingTest(rating);
-        resultEntity.setNameTest("Обзор и архитектура вычислительных сетей");
+        switch (variable){
+            case (1):
+                resultEntity.setNameTest("Обзор и архитектура вычислительных сетей");
+                rating = 10 / 9 * (9 - count);
+                resultEntity.setRatingTest(rating);
+                break;
+            case(2):
+                resultEntity.setNameTest("Локальная вычислительная сеть");
+                rating = 10 / 7 * (7 - count);
+                resultEntity.setRatingTest(rating);
+                break;
+            case(3):
+                resultEntity.setNameTest("Физическая среда передачт данных");
+                rating = 10 / 8 * (8 - count);
+                resultEntity.setRatingTest(rating);
+                break;
+            case(4):
+                resultEntity.setNameTest("Сетевые операционные системы");
+                rating = 10 / 8 * (8 - count);
+                resultEntity.setRatingTest(rating);
+                break;
+            case(5):
+                resultEntity.setNameTest("Аппаратное обеспечение вычислительных сетей");
+                rating = 10 / 8 * (8 - count);
+                resultEntity.setRatingTest(rating);
+                break;
+            default:
+                System.out.println("Ошибка");
+        }
         resultDAo.insertResult(resultEntity);
         model.addAttribute("count", count);
         model.addAttribute("rating", rating);

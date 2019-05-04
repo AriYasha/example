@@ -3,6 +3,7 @@ package com.work.resultEntity;
 import javax.persistence.*;
 import java.sql.Date;
 
+import java.time.LocalDate;
 import java.util.Objects;
 
 @Entity
@@ -12,14 +13,14 @@ public class ResultEntity {
     private String nameTest;
     private int idUsers;
     private int ratingTest;
-    private java.util.Date dataTest;
+    private LocalDate dataTest;
 
     public ResultEntity(){
 
     }
 
 
-    public ResultEntity(String nameTest, int ratingTest, java.util.Date dataTest, int idUsers){
+    public ResultEntity(String nameTest, int ratingTest, LocalDate dataTest, int idUsers){
         this.nameTest=nameTest;
         this.ratingTest=ratingTest;
         this.dataTest=dataTest;
@@ -67,11 +68,11 @@ public class ResultEntity {
 
     @Basic
     @Column(name = "dataTest", nullable = false)
-    public java.util.Date getDataTest() {
+    public LocalDate getDataTest() {
         return dataTest;
     }
 
-    public void setDataTest(java.util.Date dataTest) {
+    public void setDataTest(LocalDate dataTest) {
         this.dataTest = dataTest;
     }
 
