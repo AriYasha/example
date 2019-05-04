@@ -13,6 +13,7 @@ public class HibernateSessionFactoryUtil {
 
     public SessionFactory getSessionFactory() {
         try {
+
             Configuration configuration =
                     new Configuration().configure();
             configuration.addAnnotatedClass(UsersEntity.class);
