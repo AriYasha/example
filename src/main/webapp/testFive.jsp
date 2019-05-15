@@ -126,22 +126,22 @@
 
         <div class="row">
             <div class="col-xs-2 col-md-2">
-                <p><a href="testOne.jsp">Обзор и архитектура вычислительных сетей</a>
+                <p> <a href="testOne.jsp">Общие сведения о периферийных устройствах и их связи с микроЭВМ </a>
                 <p><a href="testTwo.jsp">Локальная вычислительная сеть</a>
                 <p><a  href="testThree.jsp">Физическая среда передачи данных</a>
-                <p><a  href="testFour.jsp">Сетевые операционные системы</a>
-                <p><a  href="testFive.jsp">Аппаратное обеспечение вычислительных сетей</a>
+                <p><a  href="testFour.jsp">Видеосистема</a>
+                <p><a  href="testFive.jsp">Внешние запоминающие устройства</a>
             </div>
             <div class="col-xs-10 col-md-10">
                 <p  class="bold1">Выберите верный ответ</p>
-                <p class="bold1">Аппаратное обеспечение вычислительных сетей</p>
+                <p class="bold1">Внешние запоминающие устройства</p>
                 <form action="/result?action=5" method="post">
                     <label class="form-check-label"></label>
                     <p>
-                        <label class="bold" >1. Мост-это:</label>
+                        <label class="bold" >1. Прямой доступ подразумевает...:</label>
                         <br>
                         <label class="radio-inline" >
-                            <input type="radio" name="chooseOne" value="a" required> ретрансляционная система, соединяющая каналы передачи данных
+                            <input type="radio" name="chooseOne" value="a" required> возможность обращения к блокам по их адресам в произвольном порядке
                         </label>
                         <br>
                         <label class="radio-inline">
@@ -158,14 +158,14 @@
                         <br>
 
                     <p>
-                        <label class="bold" >2. Коммутатор-это:</label>
+                        <label class="bold" >2. Главная характеристика  устройств-:</label>
                         <br>
                         <label class="radio-inline">
                             <input type="radio" name="chooseTwo" value="b"  required> архитектура "клиент-сервер"
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="chooseTwo" value="a">  устройство, осуществляющее выбор одного из возможных вариантов направления передачи данных
+                            <input type="radio" name="chooseTwo" value="a">  емкость хранения(Capacity), измеряемая в килобайтах, мегабайтах, гигабайтах, терабайтах
                         </label>
                         <br>
                         <label class="radio-inline">
@@ -177,10 +177,10 @@
                         </label>
                         <br>
                     <p>
-                        <label class="bold" >3. Коммутатор локальной сети-это:</label>
+                        <label class="bold" >3. Скорость передачи данных-:</label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="chooseThree" value="a" required > устройство,обеспечивающие взаимодействие сегментов одной либо группы локальной сетей
+                            <input type="radio" name="chooseThree" value="a" required > определяется как производительность обмена данными, измеряемая после выполнения поиска данных
                         </label>
                         <br>
                         <label class="radio-inline">
@@ -197,7 +197,7 @@
                         <br>
 
                     <p>
-                        <label class="bold" >4. Маршрутизатор-это :</label>
+                        <label class="bold" >4. Традиционно для записи и считывания информации используются- :</label>
                         <br>
                         <label class="radio-inline">
                             <input type="radio" name="chooseFour" value="c" required > нижние и верхние протоколы
@@ -212,12 +212,12 @@
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="chooseFour" value="a"> ретрансляционная система, соединяющая две коммуникационные сети либо их части
+                            <input type="radio" name="chooseFour" value="a"> магнитные головки
                         </label>
                         <br>
 
                     <p>
-                        <label class="bold">5. Шлюз-это:</label>
+                        <label class="bold">5. Привод, обеспечивающий точное позиционирование по сигналу обратной связи, называется:</label>
                         <br>
                         <label class="radio-inline">
                             <input type="radio" name="chooseFive" value="b" required> уникальная комбинация битов, позволяющих начать предачу данных
@@ -232,15 +232,15 @@
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="chooseFive" value="a"> ретрансляционная система, обеспечивающая взаимодействие информационных сетей
+                            <input type="radio" name="chooseFive" value="a"> сервопривод
                         </label>
 
                         <br>
                     <p>
-                        <label class="bold">6.Какая топология используется в сети </label>
+                        <label class="bold">6.Контроллер накопителя-это </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="chooseSix" value="a" required> "звезда"
+                            <input type="radio" name="chooseSix" value="a" required> электронное устройство, на одной стороне которого обмен идет байтами команд, состоящие и, конечно же, записываемой и считываемой информации, а другая его сторона связывается с блоком HDA
                         </label>
                         <br>
                         <label class="radio-inline">
@@ -257,7 +257,7 @@
                         <br>
 
                     <p>
-                        <label class="bold">7. При выборе места для установки концентратора необходимо учитывать следующие аспекты:</label>
+                        <label class="bold">7. Послойное смещение секторов-это:</label>
                         <br>
                         <label class="radio-inline">
                             <input type="radio" name="chooseSeven" value="b" required>  процедуры взаимодействия пользователя с системой или сетью
@@ -268,7 +268,7 @@
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="chooseSeven" value="a">местоположение, расстояние, питание
+                            <input type="radio" name="chooseSeven" value="a">смещение при котором начало следующего трека цилиндра чуть отстает от предыдущего
                         </label>
                         <br>
                         <label class="radio-inline">
@@ -277,10 +277,10 @@
                         <br>
 
                     <p>
-                        <label class="bold">8. Верно ли утверждение: "Шлюзы работают медленнее, чем маршрутизаторы":</label>
+                        <label class="bold">8. Форматированная емкость-:</label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="chooseEight" value="a" required> да
+                            <input type="radio" name="chooseEight" value="a" required> представляет собой объем хранимой полезной информации-то есть сумму полей данных всех доступных секторов
                         </label>
                         <br>
                         <label class="radio-inline">
@@ -297,10 +297,10 @@
                         <br>
 
                     <p>
-                        <label class="bold">9. Как передает кадры мост:</label>
+                        <label class="bold">9. Свипирование-это:</label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="chooseNine" value="a" required> последовательно
+                            <input type="radio" name="chooseNine" value="a" required> процесс, асинхронно запускаемый контроллером диска
                         </label>
                         <br>
                         <label class="radio-inline">

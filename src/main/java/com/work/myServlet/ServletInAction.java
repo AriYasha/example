@@ -33,6 +33,7 @@ public class ServletInAction {
 
     @ModelAttribute("user")
     public UsersEntity home() {
+        System.out.println(usersEntity.getPassword());
 
         return new UsersEntity();
     }
@@ -51,13 +52,18 @@ public class ServletInAction {
         String view = "index";
         if (usersEntity.getNameUsers() != null) {
             List<ResultEntity> resultEntity = resultDAo.findByIdUsers(usersEntity.getIdUsers());
+            System.out.println(resultEntity);
+            if(!resultEntity.isEmpty()){
             ResultEntity resultEntity1 = resultEntity.get(0);
             System.out.println(resultEntity1.getDataTest());
             Calendar calendar = new GregorianCalendar();
             Date date = calendar.getTime();
             model.addAttribute("usersEntity", usersEntity);
             model.addAttribute("resultEntity", resultEntity);
-            view = "information";
+            view = "information"; }
+            else {
+                view="noResults";
+            }
         } else {
             view = "login-regestration";
         }
@@ -137,6 +143,7 @@ public class ServletInAction {
                 UsersEntity usersEntity = user.get(0);
                 if(name.equals("admin") && pass.equals("admin")){
                     view="indexAdmin";
+                    model.addAttribute("user",usersEntity);
                 }
                 else {
                     if (name.equals(usersEntity.getNameUsers()) && pass.equals(usersEntity.getPassword())) {
@@ -167,6 +174,8 @@ public class ServletInAction {
     @RequestMapping(value = "/tests", method = RequestMethod.GET)
     public String getTest(@ModelAttribute("user") UsersEntity usersEntity) {
         String view = "index";
+        System.out.println(usersEntity.getNameUser());
+        System.out.println(usersEntity.getPassword());
         if (usersEntity.getNameUsers() != null) {
             view = "testOne";
 

@@ -132,23 +132,24 @@
 
         <div class="row">
             <div class="col-xs-2 col-md-2">
-               <p> <a href="testOne.jsp">Обзор и архитектура вычислительных сетей</a>
+               <p> <a href="testOne.jsp">Общие сведения о периферийных устройствах и их связи с микроЭВМ </a>
               <p><a href="testTwo.jsp">Локальная вычислительная сеть</a>
                <p><a  href="testThree.jsp">Физическая среда передачи данных</a>
-              <p><a  href="testFour.jsp">Сетевые операционные системы</a>
-               <p><a  href="testFive.jsp">Аппаратное обеспечение вычислительных сетей</a>
+              <p><a  href="testFour.jsp">Видеосистема</a>
+               <p><a  href="testFive.jsp">Внешние запоминающие устройства</a>
 
             </div>
             <div class="col-xs-10 col-md-10">
                 <p  class="bold1">Выберите верный ответ</p>
-                <p class="bold1">Обзор и архитектура вычислительных сетей</p>
+                <p class="bold1">Общие сведения о периферийных устройствах и их связи с микроЭВМ</p>
                 <form action="/result?action=1" method="post">
                     <label class="form-check-label"></label>
                     <p>
-                    <label class="bold" >1. Одноранговая архитерура-это:</label>
+                    <label class="bold" >1. Периферийные устройства ПЭВМ обычно подразделяют на три большие группы;1)устройства связи ПЭВМ с человеком-пользователем
+                        ;2)устройства связи с объектами контроля и управления; чего не хватает?:</label>
                     <br>
                     <label class="radio-inline" >
-                        <input type="radio" name="chooseOne" value="a" required> это концепция информационной системы, в которой ее ресурсы расспределены по всем системам
+                        <input type="radio" name="chooseOne" value="a" required> устройство для длительного хранения информации большой емкости
                     </label>
                     <br>
                     <label class="radio-inline">
@@ -165,14 +166,14 @@
                     <br>
 
                     <p>
-                    <label class="bold" >2. Архитектура "терминал-гланый компюьтер"-это:</label>
+                    <label class="bold" >2. Контроллеры-это:</label>
                     <br>
                     <label class="radio-inline">
                         <input type="radio" name="chooseTwo" value="b"  required> архитектура "клиент-сервер"
                     </label>
                         <br>
                     <label class="radio-inline">
-                        <input type="radio" name="chooseTwo" value="a">  концепция информационной сети, в которой вся обработка данных осуществляется одним или группой главных компьютеров
+                        <input type="radio" name="chooseTwo" value="a">  управляющие устройства
                     </label>
                         <br>
                     <label class="radio-inline">
@@ -184,10 +185,10 @@
                     </label>
                         <br>
                      <p>
-                    <label class="bold" >3. Архитектура "клиент-сервер"-это:</label>
+                    <label class="bold" >3. Драйверы-это:</label>
                     <br>
                     <label class="radio-inline">
-                        <input type="radio" name="chooseThree" value="a" required > концепция информационной сети, в которой основная часть ее ресурсов сосредоточена в серверах, обслуживающих своих клиентов
+                        <input type="radio" name="chooseThree" value="a" required > специальные управляющие программы
                     </label>
                     <br>
                     <label class="radio-inline">
@@ -204,7 +205,8 @@
                     <br>
 
                     <p>
-                    <label class="bold" >4. Модель OSI можно разделить на :</label>
+                    <label class="bold" >4. Существует два способа передачи слов информации по линиям данных между ВУ
+                        и микроЭВМ:</label>
                     <br>
                     <label class="radio-inline">
                         <input type="radio" name="chooseFour" value="c" required > нижние и верхние протоколы
@@ -219,12 +221,12 @@
                     </label>
                     <br>
                     <label class="radio-inline">
-                        <input type="radio" name="chooseFour" value="a"> горизонтальную модель на базе протоколов,вертикальную модель на основе услуг
+                        <input type="radio" name="chooseFour" value="a"> параллельный и последовательный
                     </label>
                     <br>
 
                     <p>
-                    <label class="bold">5. Топология-это:</label>
+                    <label class="bold">5. Возможны два режима последовательной передачи данных:</label>
                     <br>
                     <label class="radio-inline">
                         <input type="radio" name="chooseFive" value="b" required> уникальная комбинация битов, позволяющих начать предачу данных
@@ -235,27 +237,27 @@
                     </label>
                     <br>
                     <label class="radio-inline">
-                        <input type="radio" name="chooseFive" value="d"> рабочие станции, которые используют ресурсы сервера
+                        <input type="radio" name="chooseFive" value="d"> рабочие станции, которые используют два ресурса сервера
                     </label>
                     <br>
                     <label class="radio-inline">
-                        <input type="radio" name="chooseFive" value="a"> способ соединения компьютеров в сеть
+                        <input type="radio" name="chooseFive" value="a"> синхронный и асинхронный
                     </label>
 
 <br>
                     <p>
-                    <label class="bold">6. Виды топологий:"общая шина","звезда", чего не хватает</label>
+                    <label class="bold">6. При передаче данных по линиям связи используются три режима: симплексный, полудуплексный и...</label>
                     <br>
                     <label class="radio-inline">
-                        <input type="radio" name="chooseSix" value="a" required> "дерево"
+                        <input type="radio" name="chooseSix" value="a" required> дуплексный
                     </label>
                     <br>
                     <label class="radio-inline">
-                        <input type="radio" name="chooseSix" value="b"> "солнце"
+                        <input type="radio" name="chooseSix" value="b"> полусимплексный
                     </label>
                     <br>
                     <label class="radio-inline">
-                        <input type="radio" name="chooseSix" value="c"> "земля"
+                        <input type="radio" name="chooseSix" value="c"> симплексно-дуплексный
                     </label>
                     <br>
                     <label class="radio-inline">
@@ -264,7 +266,7 @@
 <br>
 
                     <p>
-                    <label class="bold">7. Метод доступа-это:</label>
+                    <label class="bold">7. Процедура аналогоцифрового преобразования состоит их двух этапов: дискретизации по времени и...:</label>
                     <br>
                     <label class="radio-inline">
                         <input type="radio" name="chooseSeven" value="b" required>  процедуры взаимодействия пользователя с системой или сетью
@@ -275,7 +277,7 @@
                     </label>
                     <br>
                     <label class="radio-inline">
-                        <input type="radio" name="chooseSeven" value="a">способ определения того, какая из рабочих станций может слудующей использовать ЛВС
+                        <input type="radio" name="chooseSeven" value="a">квантования по уровню
                     </label>
                     <br>
                     <label class="radio-inline">
@@ -284,10 +286,10 @@
 <br>
 
                     <p>
-                    <label class="bold">8. Пакет-это:</label>
+                    <label class="bold">8. Аналогоцифровой преобразователь служит для-:</label>
                     <br>
                     <label class="radio-inline">
-                        <input type="radio" name="chooseEight" value="a" required> единица информации, передаваемая между станциями
+                        <input type="radio" name="chooseEight" value="a" required> преобразования аналогового сигнала(например,электрического напряжения) в код числа
                     </label>
                     <br>
                     <label class="radio-inline">
@@ -304,14 +306,14 @@
 <br>
 
                     <p>
-                    <label class="bold">9. Клиенты-это:</label>
+                    <label class="bold">9.Компаратор-это:</label>
                     <br>
                     <label class="radio-inline">
                         <input type="radio" name="chooseNine" value="b" required> метод доступа к среде, при котором от одной рабочей станции к другой передается маркер, дающий разрешение на передачу данных
                     </label>
                     <br>
                     <label class="radio-inline">
-                        <input type="radio" name="chooseNine" value="a"> рабочие станции, которые используют ресурсы сервера и предоставляют удобные интерфейсы пользователя
+                        <input type="radio" name="chooseNine" value="a"> сравнивающее устройство
                     </label>
                     <br>
                     <label class="radio-inline">

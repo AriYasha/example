@@ -126,11 +126,11 @@
 
         <div class="row">
             <div class="col-xs-2 col-md-2">
-                <p><a href="testOne.jsp">Обзор и архитектура вычислительных сетей</a>
+                <p> <a href="testOne.jsp">Общие сведения о периферийных устройствах и их связи с микроЭВМ </a>
                 <p><a href="testTwo.jsp">Локальная вычислительная сеть</a>
                 <p><a  href="testThree.jsp">Физическая среда передачи данных</a>
-                <p><a  href="testFour.jsp">Сетевые операционные системы</a>
-                <p><a  href="testFive.jsp">Аппаратное обеспечение вычислительных сетей</a>
+                <p><a  href="testFour.jsp">Видеосистема</a>
+                <p><a  href="testFive.jsp">Внешние запоминающие устройства</a>
             </div>
             <div class="col-xs-10 col-md-10">
                 <p  class="bold1">Выберите верный ответ</p>

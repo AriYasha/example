@@ -126,22 +126,22 @@
 
         <div class="row">
             <div class="col-xs-2 col-md-2">
-                <p><a href="testOne.jsp">Обзор и архитектура вычислительных сетей</a>
+                <p> <a href="testOne.jsp">Общие сведения о периферийных устройствах и их связи с микроЭВМ </a>
                 <p><a href="testTwo.jsp">Локальная вычислительная сеть</a>
                 <p><a  href="testThree.jsp">Физическая среда передачи данных</a>
-                <p><a  href="testFour.jsp">Сетевые операционные системы</a>
-                <p><a  href="testFive.jsp">Аппаратное обеспечение вычислительных сетей</a>
+                <p><a  href="testFour.jsp">Видеосистема</a>
+                <p><a  href="testFive.jsp">Внешние запоминающие устройства</a>
             </div>
             <div class="col-xs-10 col-md-10">
                 <p  class="bold1">Выберите верный ответ</p>
-                <p class="bold1">Сетевые операционные системы</p>
+                <p class="bold1">Видеосистема</p>
                 <form action="/result?action=4" method="post">
                     <label class="form-check-label"></label>
                     <p>
-                        <label class="bold" >1. Сетевые операционные системы-это:</label>
+                        <label class="bold" >1. Что такое панорамирование:</label>
                         <br>
                         <label class="radio-inline" >
-                            <input type="radio" name="chooseOne" value="a" required> комплекс программ,обеспечивающих обработку,хранение и передачу данных в сети
+                            <input type="radio" name="chooseOne" value="a" required> отображение заданной области
                         </label>
                         <br>
                         <label class="radio-inline">
@@ -158,14 +158,14 @@
                         <br>
 
                     <p>
-                        <label class="bold" >2. Редиректор-это:</label>
+                        <label class="bold" >2. Спрайт-это:</label>
                         <br>
                         <label class="radio-inline">
                             <input type="radio" name="chooseTwo" value="b"  required> архитектура "клиент-сервер"
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="chooseTwo" value="a">  сетевое программное обеспечение,которое принимает запросы ввода/вывода для удаленных файлов
+                            <input type="radio" name="chooseTwo" value="a">  небольшой прямоугольный фрагмент изображения, который может перемещаться по экрану как единое целое
                         </label>
                         <br>
                         <label class="radio-inline">
@@ -177,87 +177,87 @@
                         </label>
                         <br>
                     <p>
-                        <label class="bold" >3. Сколько фактически существует типов редиректа:</label>
+                        <label class="bold" >3. Дисплей-это:</label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="chooseThree" value="a" required > 2
+                            <input type="radio" name="chooseThree" value="a" required > устройство отображения
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="chooseThree" value="b"> 3
+                            <input type="radio" name="chooseThree" value="b"> небольшой прямоугольный фрагмент изображения
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="chooseThree" value="c"> 1
+                            <input type="radio" name="chooseThree" value="c"> топология ЛВС
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="chooseThree" value="d"> 6
-                        </label>
-                        <br>
-
-                    <p>
-                        <label class="bold" >4. На каком уровне модели OSI функционируют редиректоры :</label>
-                        <br>
-                        <label class="radio-inline">
-                            <input type="radio" name="chooseFour" value="c" required > физическом
-                        </label>
-                        <br>
-                        <label class="radio-inline">
-                            <input type="radio" name="chooseFour" value="b"> сетевом
-                        </label>
-                        <br>
-                        <label class="radio-inline">
-                            <input type="radio" name="chooseFour" value="d"> транспортном
-                        </label>
-                        <br>
-                        <label class="radio-inline">
-                            <input type="radio" name="chooseFour" value="a"> представительском
+                            <input type="radio" name="chooseThree" value="d">множественный доступ с прослушиванием несущей
                         </label>
                         <br>
 
                     <p>
-                        <label class="bold">5. Распределители-это:</label>
+                        <label class="bold" >4.Видеосистема современного компьютера состоит из обязательных состовляющих.Каких? :</label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="chooseFive" value="b" required> уникальная комбинация битов, позволяющих начать предачу данных
+                            <input type="radio" name="chooseFour" value="c" required > клавиатура и дисплей
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="chooseFive" value="c"> множественный доступ с прослушиванием несущей
+                            <input type="radio" name="chooseFour" value="b"> дисплей и видеокарта
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="chooseFive" value="d"> рабочие станции, которые используют ресурсы сервера
+                            <input type="radio" name="chooseFour" value="d"> монитор и системный блок
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="chooseFive" value="a"> это часть программного обеспечения
-                        </label>
-
-                        <br>
-                    <p>
-                        <label class="bold">6. Производительность-это</label>
-                        <br>
-                        <label class="radio-inline">
-                            <input type="radio" name="chooseSix" value="a" required> характеристика сети, позволяющая оценить,насколько быстро информация передающей рабочей станции достигнет приемной рабочей станции
-                        </label>
-                        <br>
-                        <label class="radio-inline">
-                            <input type="radio" name="chooseSix" value="b"> "солнце"
-                        </label>
-                        <br>
-                        <label class="radio-inline">
-                            <input type="radio" name="chooseSix" value="c"> "земля"
-                        </label>
-                        <br>
-                        <label class="radio-inline">
-                            <input type="radio" name="chooseSix" value="d"> "квадрат"
+                            <input type="radio" name="chooseFour" value="a">графическая и дополнительная подсистемы обработки видеоизображений
                         </label>
                         <br>
 
                     <p>
-                        <label class="bold">7. Безопасность-это:</label>
+                        <label class="bold">5. Графический адаптер служит для-:</label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="chooseFive" value="b" required> характеристики сети
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="chooseFive" value="c"> множественного доступа с прослушиванием несущей
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="chooseFive" value="d"> воиспроизведение видеоматериалов
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="chooseFive" value="a"> программного формирования графических и текстовых изображений
+                        </label>
+
+                        <br>
+                    <p>
+                        <label class="bold">6. Куда адаптер посылает сигналы управления яркостью лучей RGB и синхросигналы строчной и кадровой разверток</label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="chooseSix" value="a" required> монитор
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="chooseSix" value="b"> дисплей
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="chooseSix" value="c"> несущей
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="chooseSix" value="d"> клавиатура
+                        </label>
+                        <br>
+
+                    <p>
+                        <label class="bold">7. Растровый метод подразумевает...:</label>
                         <br>
                         <label class="radio-inline">
                             <input type="radio" name="chooseSeven" value="b" required>  процедуры взаимодействия пользователя с системой или сетью
@@ -268,7 +268,7 @@
                         </label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="chooseSeven" value="a">одна из основных задач, решаемых любой нормальной компьютерной сетью
+                            <input type="radio" name="chooseSeven" value="a">что некий рисующий инструмент, способный оставлять видимый след, сканирует всю поверхность, на которую выводится изображение
                         </label>
                         <br>
                         <label class="radio-inline">
@@ -277,10 +277,10 @@
                         <br>
 
                     <p>
-                        <label class="bold">8. Прозрачность-это:</label>
+                        <label class="bold">8. Альтернатива растровым устройсвам:</label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="chooseEight" value="a" required> это такое состояние сети, когда пользователь, работая в сети, не видити ее.
+                            <input type="radio" name="chooseEight" value="a" required> векторные устройства вывода изображений
                         </label>
                         <br>
                         <label class="radio-inline">
@@ -296,10 +296,10 @@
                         </label>
                         <br>
                     <p>
-                        <label class="bold">9. Цель управления учетом использования ресурсов:</label>
+                        <label class="bold">9. Страница-это:</label>
                         <br>
                         <label class="radio-inline">
-                            <input type="radio" name="chooseNine" value="a" required> измерить параметры использования сети так, чтобы можно было соотвествующим образом регулировать ее использование индивидуальными и групповыми пользователями
+                            <input type="radio" name="chooseNine" value="a" required> область видеопамяти, в которой умещается образ целого экрана
                         </label>
                         <br>
                         <label class="radio-inline">

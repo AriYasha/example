@@ -60,7 +60,7 @@
 <body>
 <section class="container user-log-block">
 
-    <form action="index.jsp" method="get">
+    <form action="indexAdmin.jsp" method="get">
         <button type="submit" class="btn btn-warning" >Вернуться на главную страницу</button>
     </form>
     <p>
