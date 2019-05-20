@@ -149,66 +149,68 @@
     </tr>
 <c:if test="${chooseOne==0}">
     <tr>
-    <td><p>Одноранговая архитектура-это:</p></td>
+    <td><p>Периферийные устройства ПЭВМ обычно подразделяют на три большие группы;1)устройства связи ПЭВМ с человеком-пользователем
+        ;2)устройства связи с объектами контроля и управления; чего не хватает?</p></td>
    <td> <p>подробнее прочитать про операторы выбора можно <a
-           href="http://developer.alexanderklimov.ru/android/java/switch.php">здесь</a></p></td>
+           href="theory.jsp">здесь</a></p></td>
 
     </tr>
 </c:if>
     <c:if test="${chooseTwo==0}">
     <tr>
-   <td> <p>Архитектура "терминал-главный компьютер"-это</p></td>
+   <td> <p>Контроллеры-это</p></td>
     <td><p>прочитать подробнее про операторы условия вы можете <a
-            href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+            href="theory.jsp">здесь</a></p></td>
     </tr>
 </c:if>
                 <c:if test="${chooseThree==0}">
     <tr>
-                   <td> <p>Архитектура "клиент-сервер"-это</p></td>
+                   <td> <p>Драйверы-это</p></td>
                    <td> <p>прочитать подробнее про операторы  вы можете <a
-                           href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                           href="theory.jsp">здесь</a></p></td>
     </tr>
                 </c:if>
                 <c:if test="${chooseFour==0}">
     <tr>
-                   <td> <p>Модель OSI можно разделить на :</p></td>
+                   <td> <p>Существует два способа передачи слов информации по линиям данных между ВУ
+                       и микроЭВМ:</p></td>
                     <td><p>прочитать подробнее про операторы условия вы можете <a
-                            href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                            href="theory.jsp">здесь</a></p></td>
     </tr>
                 </c:if>
                 <c:if test="${chooseFive==0}">
     <tr>
-                    <td><p> Топология-это</p></td>
+                    <td><p> Возможны два режима последовательной передачи данных:</p></td>
                    <td><p>прочитать подробнее про операторы условия вы можете <a
-                           href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                           href="theory.jsp">здесь</a></p></td>
     </tr>
                 </c:if>
     <c:if test="${chooseSix==0}">
         <tr>
-            <td><p> Виды топологий:"общая шина","кольцо","звезда", чего не хватает</p></td>
+            <td><p>  При передаче данных по линиям связи используются три режима: симплексный, полудуплексный и...</p></td>
             <td><p>прочитать подробнее про операторы условия вы можете <a
-                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                    href="theory.jsp">здесь</a></p></td>
         </tr>
     </c:if>
     <c:if test="${chooseSeven==0}">
         <tr>
-            <td><p> Метод доступа это </p></td>
+            <td><p>  Процедура аналогоцифрового преобразования состоит их двух этапов: дискретизации по времени и...: </p></td>
             <td><p>прочитать подробнее про операторы условия вы можете <a
-                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                    href="theory.jsp">здесь</a></p></td>
         </tr>
     </c:if>
     <c:if test="${chooseEight==0}">
         <tr>
-            <td><p> Пакет-это</p></td>
+            <td><p> Аналогоцифровой преобразователь служит для-:</p></td>
             <td><p>прочитать подробнее про операторы условия вы можете <a
-                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                    href="theory.jsp">здесь</a></p></td>
         </tr>
     </c:if>
     <c:if test="${chooseNine==0}">
         <tr>
-            <td><p> Клиенты-это</p></td>
+            <td><p> Компаратор-это:</p></td>
             <td><p>прочитать подробнее про операторы условия вы можете <a
-                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                    href="theory.jsp">здесь</a></p></td>
         </tr>
     </c:if>
 </table>

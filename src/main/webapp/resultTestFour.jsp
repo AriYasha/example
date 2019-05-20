@@ -148,66 +148,66 @@
                     </tr>
                     <c:if test="${chooseOne==0}">
                         <tr>
-                            <td><p>1.Мост-это:</p></td>
+                            <td><p>1Прямой доступ подразумевает...:</p></td>
                             <td> <p>подробнее прочитать про операторы выбора можно <a
-                                    href="http://developer.alexanderklimov.ru/android/java/switch.php">здесь</a></p></td>
+                                    href="theoryFive.jsp">здесь</a></p></td>
 
                         </tr>
                     </c:if>
                     <c:if test="${chooseTwo==0}">
                         <tr>
-                            <td> <p>2. Коммутатор-это:</p></td>
+                            <td> <p>2. Главная характеристика  устройств-:</p></td>
                             <td><p>прочитать подробнее про операторы условия вы можете <a
-                                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                                    href="theoryFive.jsp">здесь</a></p></td>
                         </tr>
                     </c:if>
                     <c:if test="${chooseThree==0}">
                         <tr>
-                            <td> <p>3.Коммутатор локальной сети-это:</p></td>
+                            <td> <p>3.Скорость передачи данных-:</p></td>
                             <td> <p>прочитать подробнее про операторы  вы можете <a
-                                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                                    href="theoryFive.jsp">здесь</a></p></td>
                         </tr>
                     </c:if>
                     <c:if test="${chooseFour==0}">
                         <tr>
-                            <td> <p>4.Маршрутизатор-это :</p></td>
+                            <td> <p>4.Традиционно для записи и считывания информации используются- :</p></td>
                             <td><p>прочитать подробнее про операторы условия вы можете <a
-                                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                                    href="theoryFive.jsp">здесь</a></p></td>
                         </tr>
                     </c:if>
                     <c:if test="${chooseFive==0}">
                         <tr>
-                            <td><p> 5. Шлюз-это:</p></td>
+                            <td><p> 5.Привод, обеспечивающий точное позиционирование по сигналу обратной связи, называется:</p></td>
                             <td><p>прочитать подробнее про операторы условия вы можете <a
-                                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                                    href="theoryFive.jsp">здесь</a></p></td>
                         </tr>
                     </c:if>
                     <c:if test="${chooseSix==0}">
                         <tr>
-                            <td><p> 6.Какая топология используется в сети:</p></td>
+                            <td><p> 6.Контроллер накопителя-это:</p></td>
                             <td><p>прочитать подробнее про операторы условия вы можете <a
-                                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                                    href="theoryFive.jsp">здесь</a></p></td>
                         </tr>
                     </c:if>
                     <c:if test="${chooseSeven==0}">
                         <tr>
-                            <td><p> 7. При выборе места для установки концентратора необходимо учитывать слудующие аспекты: </p></td>
+                            <td><p> 7. Послойное смещение секторов-это: </p></td>
                             <td><p>прочитать подробнее про операторы условия вы можете <a
-                                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                                    href="theoryFive.jsp">здесь</a></p></td>
                         </tr>
                     </c:if>
                     <c:if test="${chooseEight==0}">
                         <tr>
-                            <td><p> 8.Верно ли утверждение: шлюзы работают медленнее, чем маршрутизаторы :</p></td>
+                            <td><p> 8.Форматированная емкость-:</p></td>
                             <td><p>прочитать подробнее про операторы условия вы можете <a
-                                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                                    href="theoryFive.jsp">здесь</a></p></td>
                         </tr>
                     </c:if>
                     <c:if test="${chooseNine==0}">
                         <tr>
-                            <td><p> 9. Как передает кадры мост :</p></td>
+                            <td><p> 9.  Свипирование-это:</p></td>
                             <td><p>прочитать подробнее про операторы условия вы можете <a
-                                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                                    href="theoryFive.jsp">здесь</a></p></td>
                         </tr>
                     </c:if>
                 </table>

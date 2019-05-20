@@ -150,7 +150,7 @@
                         <tr>
                             <td><p>1.Локальная вычислительная сеть -это:</p></td>
                             <td> <p>подробнее прочитать про операторы выбора можно <a
-                                    href="http://developer.alexanderklimov.ru/android/java/switch.php">здесь</a></p></td>
+                                    href="theoryTwo.jsp">здесь</a></p></td>
 
                         </tr>
                     </c:if>
@@ -158,56 +158,56 @@
                         <tr>
                             <td> <p>2. Рабочая станция-это:</p></td>
                             <td><p>прочитать подробнее про операторы условия вы можете <a
-                                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                                    href="theoryTwo.jsp">здесь</a></p></td>
                         </tr>
                     </c:if>
                     <c:if test="${chooseThree==0}">
                         <tr>
                             <td> <p>3.Cервер-это:</p></td>
                             <td> <p>прочитать подробнее про операторы  вы можете <a
-                                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                                    href="theoryTwo.jsp">здесь</a></p></td>
                         </tr>
                     </c:if>
                     <c:if test="${chooseFour==0}">
                         <tr>
                             <td> <p>4.Сетевые операционные системы-это :</p></td>
                             <td><p>прочитать подробнее про операторы условия вы можете <a
-                                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                                    href="theoryTwo.jsp">здесь</a></p></td>
                         </tr>
                     </c:if>
                     <c:if test="${chooseFive==0}">
                         <tr>
                             <td><p> 5. Защита данных необходима для:</p></td>
                             <td><p>прочитать подробнее про операторы условия вы можете <a
-                                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                                    href="theoryTwo.jsp">здесь</a></p></td>
                         </tr>
                     </c:if>
                     <c:if test="${chooseSix==0}">
                         <tr>
                             <td><p> 6. Первый шаг к безопасности</p></td>
                             <td><p>прочитать подробнее про операторы условия вы можете <a
-                                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                                    href="theoryTwo.jsp">здесь</a></p></td>
                         </tr>
                     </c:if>
                     <c:if test="${chooseSeven==0}">
                         <tr>
                             <td><p> 7. К коммуникационным каналам относятся: </p></td>
                             <td><p>прочитать подробнее про операторы условия вы можете <a
-                                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                                    href="theoryTwo.jsp">здесь</a></p></td>
                         </tr>
                     </c:if>
                     <c:if test="${chooseEight==0}">
                         <tr>
                             <td><p> 8.Компьютеры, входящие в ЛВС клиентско-серверной архитектуры, делятся на два типа :</p></td>
                             <td><p>прочитать подробнее про операторы условия вы можете <a
-                                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                                    href="theoryTwo.jsp">здесь</a></p></td>
                         </tr>
                     </c:if>
                     <c:if test="${chooseNine==0}">
                         <tr>
                             <td><p> 9. К обонентским системам относятся :</p></td>
                             <td><p>прочитать подробнее про операторы условия вы можете <a
-                                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                                    href="theoryTwo.jsp">здесь</a></p></td>
                         </tr>
                     </c:if>
                 </table>

@@ -148,66 +148,66 @@
                     </tr>
                     <c:if test="${chooseOne==0}">
                         <tr>
-                            <td><p>1.Сетевые операционные системы-это :</p></td>
+                            <td><p>1.Что такое панорамирование:</p></td>
                             <td> <p>подробнее прочитать про операторы выбора можно <a
-                                    href="http://developer.alexanderklimov.ru/android/java/switch.php">здесь</a></p></td>
+                                    href="theoryFour.jsp">здесь</a></p></td>
 
                         </tr>
                     </c:if>
                     <c:if test="${chooseTwo==0}">
                         <tr>
-                            <td> <p>2. Редиректор:</p></td>
+                            <td> <p>2.  Спрайт-это:</p></td>
                             <td><p>прочитать подробнее про операторы условия вы можете <a
-                                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                                    href="theoryFour.jsp">здесь</a></p></td>
                         </tr>
                     </c:if>
                     <c:if test="${chooseThree==0}">
                         <tr>
-                            <td> <p>3.Сколько фактически существует типов редиректа:</p></td>
+                            <td> <p>3.Дисплей-это:</p></td>
                             <td> <p>прочитать подробнее про операторы  вы можете <a
-                                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                                    href="theoryFour.jsp">здесь</a></p></td>
                         </tr>
                     </c:if>
                     <c:if test="${chooseFour==0}">
                         <tr>
-                            <td> <p>4.На каком уровне модели OSI функционирует редиректоры :</p></td>
+                            <td> <p>4.Видеосистема современного компьютера состоит из обязательных состовляющих.Каких?</p></td>
                             <td><p>прочитать подробнее про операторы условия вы можете <a
-                                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                                    href="theoryFour.jsp">здесь</a></p></td>
                         </tr>
                     </c:if>
                     <c:if test="${chooseFive==0}">
                         <tr>
-                            <td><p> 5. Распределители-это:</p></td>
+                            <td><p> 5. Графический адаптер служит для-:</p></td>
                             <td><p>прочитать подробнее про операторы условия вы можете <a
-                                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                                    href="theoryFour.jsp">здесь</a></p></td>
                         </tr>
                     </c:if>
                     <c:if test="${chooseSix==0}">
                         <tr>
-                            <td><p> 6. Производительность-это:</p></td>
+                            <td><p> 6. Куда адаптер посылает сигналы управления яркостью лучей RGB и синхросигналы строчной и кадровой разверток</p></td>
                             <td><p>прочитать подробнее про операторы условия вы можете <a
-                                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                                    href="theoryFour.jsp">здесь</a></p></td>
                         </tr>
                     </c:if>
                     <c:if test="${chooseSeven==0}">
                         <tr>
-                            <td><p> 7. Безопасность: </p></td>
+                            <td><p> 7. Растровый метод подразумевает...: </p></td>
                             <td><p>прочитать подробнее про операторы условия вы можете <a
-                                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                                    href="theoryFour.jsp">здесь</a></p></td>
                         </tr>
                     </c:if>
                     <c:if test="${chooseEight==0}">
                         <tr>
-                            <td><p> 8.Прозрачность :</p></td>
+                            <td><p> 8.Альтернатива растровым устройсвам:</p></td>
                             <td><p>прочитать подробнее про операторы условия вы можете <a
-                                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                                    href="theoryFour.jsp">здесь</a></p></td>
                         </tr>
                     </c:if>
                     <c:if test="${chooseNine==0}">
                         <tr>
-                            <td><p> 9. Цель управления учетом использования ресурсов -это:</p></td>
+                            <td><p> 9. Страница-это:</p></td>
                             <td><p>прочитать подробнее про операторы условия вы можете <a
-                                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                                    href="theoryFour.jsp">здесь</a></p></td>
                         </tr>
                     </c:if>
                 </table>

@@ -84,21 +84,56 @@
     </c:forEach>
 
 </table>
-        </div>
+
+</div>
 
     <form action="/resultBySurname"  method="POST">
-        <div class="col-xs-2 col-md-2">
-            <h3>Поиск результатов тестов по фамилии</h3>
-            <label>Выберите даты поиска</label>
+        <h3>Поиск результатов тестов по фамилии</h3>
+        <p>
+
+            <div class="col-xs-4 col-md-4">
+                <div class="row">
+
+        <div class="col-xs-3 col-md-3">
+
+
+            <label>Выберите даты поиска</label></div>
+            <div class="col-xs-1 col-md-1">
             <input type="date" name="dateFrom">
-            <label>Введите фамилию студента"</label>
-            <input type="text" placeholder="Савчиц" name="surname">
-            <p>
-    <input type="submit" name="result" value="Поиск">
+            </div>
         </div>
-       <div class="col-xs-2 col-md-2">
-           <input type="date" name="dateTo" value="2019-04-23">
-       </div>
+                <p>
+        <div class="row">
+            <div class="col-md-3 col-xs-3">
+                <label>Выберите даты поиска</label>
+            </div>
+            <div class="col-xs-1 col-md-1">
+                <input type="date" name="dateTo" >
+            </div>
+
+        </div>
+    <p>
+        <div class="row">
+            <div class="col-xs-3 col-md-3">
+                <label>Введите фамилию студента</label>
+            </div>
+            <div class="col-xs-1 col-md-1">
+                <input type="text" placeholder="Савчиц" name="surname">
+            </div>
+        </div>
+    <p>
+        <div class="row">
+            <div class="col-xs-3 col-md-3">
+                <input type="submit" name="result" value="Поиск">
+
+            </div>
+        </div>
+        </div>
+
+
+
+
+
     </form>
     </div>
 </section>

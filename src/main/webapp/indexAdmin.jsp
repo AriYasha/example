@@ -234,8 +234,8 @@
                                 </div>
                                 <div class="anim delay2">
                                     <div class="btns-wrap">
-                                        <a href="courses-list.html" class="btn btn-warning btn-theme text-uppercase">Our Courses</a>
-                                        <a href="contact.html" class="btn btn-white text-uppercase">Contact us</a>
+                                        <a href="informationAboutCourse.jsp" class="btn btn-warning btn-theme text-uppercase">Our Courses</a>
+                                        <a href="ourContact.jsp" class="btn btn-white text-uppercase">Contact us</a>
                                     </div>
                                 </div>
                             </div>

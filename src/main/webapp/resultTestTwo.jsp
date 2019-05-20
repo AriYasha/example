@@ -150,7 +150,7 @@
                         <tr>
                             <td><p>1.Кабель связи :</p></td>
                             <td> <p>подробнее прочитать про операторы выбора можно <a
-                                    href="http://developer.alexanderklimov.ru/android/java/switch.php">здесь</a></p></td>
+                                    href="theoryThree.jsp">здесь</a></p></td>
 
                         </tr>
                     </c:if>
@@ -158,56 +158,56 @@
                         <tr>
                             <td> <p>2. Вид кабеля, который широко используется как для построения локальных связей, так и для образования магистралей глобальных сетей:</p></td>
                             <td><p>прочитать подробнее про операторы условия вы можете <a
-                                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                                    href="theoryThree.jsp">здесь</a></p></td>
                         </tr>
                     </c:if>
                     <c:if test="${chooseThree==0}">
                         <tr>
                             <td> <p>3.Кабель типа "витая пара"-это:</p></td>
                             <td> <p>прочитать подробнее про операторы  вы можете <a
-                                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                                    href="theoryThree.jsp">здесь</a></p></td>
                         </tr>
                     </c:if>
                     <c:if test="${chooseFour==0}">
                         <tr>
                             <td> <p>4.Сколько основных типов беспроводной технологии :</p></td>
                             <td><p>прочитать подробнее про операторы условия вы можете <a
-                                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                                    href="theoryThree.jsp">здесь</a></p></td>
                         </tr>
                     </c:if>
                     <c:if test="${chooseFive==0}">
                         <tr>
                             <td><p> 5. Технология "Радиосвязь":</p></td>
                             <td><p>прочитать подробнее про операторы условия вы можете <a
-                                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                                    href="theoryThree.jsp">здесь</a></p></td>
                         </tr>
                     </c:if>
                     <c:if test="${chooseSix==0}">
                         <tr>
                             <td><p> 6. Инфракрасная связь-это:</p></td>
                             <td><p>прочитать подробнее про операторы условия вы можете <a
-                                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                                    href="theoryThree.jsp">здесь</a></p></td>
                         </tr>
                     </c:if>
                     <c:if test="${chooseSeven==0}">
                         <tr>
                             <td><p> 7. Неэкранированная витая пара-это: </p></td>
                             <td><p>прочитать подробнее про операторы условия вы можете <a
-                                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                                    href="theoryThree.jsp">здесь</a></p></td>
                         </tr>
                     </c:if>
                     <c:if test="${chooseEight==0}">
                         <tr>
                             <td><p> 8.Где используется коаксиальный кабель :</p></td>
                             <td><p>прочитать подробнее про операторы условия вы можете <a
-                                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                                    href="theoryTwo.jsp">здесь</a></p></td>
                         </tr>
                     </c:if>
                     <c:if test="${chooseNine==0}">
                         <tr>
                             <td><p> 9. Сопряжение с физическими средствами соединения посредством физической среды обеспечивает :</p></td>
                             <td><p>прочитать подробнее про операторы условия вы можете <a
-                                    href="http://developer.alexanderklimov.ru/android/java/if.php">здесь</a></p></td>
+                                    href="theoryThree.jsp">здесь</a></p></td>
                         </tr>
                     </c:if>
                 </table>
